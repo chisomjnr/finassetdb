@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    
+  <meta name="title" content="Welcome to FinAsset">
+  <meta name="description" content="FinAsset is your comprehensive solution for efficient asset management. Track, manage, and optimize your assets with ease.">
+  
+ 
+  
+    
+
+  <link rel="icon" href="assets/social (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="log2.css" />
+    <title>FinAsset | Sign Up</title>
+  </head>
+  <body>
+
+<style>
+  /* Style for the success and error popups */
+  .popup {
+            display: none;
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: white;
+            animation: slideIn 0.5s forwards;
+        }
+
+        #successPopup {
+            background-color: #4caf50;
+        }
+
+        #errorPopup {
+            background-color: #f44336;
+        }
+
+        /* Slide-in animation for the popup */
+        @keyframes slideIn {
+            from {
+                bottom: -100px;
+                opacity: 0;
+            }
+            to {
+                bottom: 20px;
+                opacity: 1;
+            }
+        }
+    </style>
+
+
+
+    <div id="signupForm" class="container">
+      <div class="container__content">
+        <a class="back" id="goBackLink" href="#"><i class="ri-arrow-left-line"></i></a>
+
+
+        <script>
+            document.getElementById("goBackLink").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default behavior of the link
+            
+                history.back(); // Go back to the previous page
+            });
+            </script>
+          
+        <h2>FinAsset<strong style="color: orangered;">.</strong></h2>
+        <h3>Let's Get You Started!</h3>
+        <h1>Create An Account</h1>
+        <form id="signupForm">
+            <label for="fullName">Full Name</label>
+            <div class="input__row">
+              <input type="text" id="fullName" placeholder="Enter Your Legal Names" required />
+            </div>
+
+            <label for="companyName">Company's Name</label>
+            <div class="input__row">
+              <input type="text" id="companyName" placeholder="Enter Your Company's Names" required />
+            </div>
+
+            <label for="email">Email</label>
+            <div class="input__row">
+              <input type="email" id="email" placeholder="Enter Your Email" required />
+            </div>
+
+            <label for="password">Password</label>
+            <div class="input__row">
+              <input type="password" id="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Create Account</button> 
+        </form>
+      
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup">User Created Successfully</div>
+
+    <!-- Error Popup -->
+    <div id="errorPopup" class="popup">This User Mail Already Exists</div>
+
+      <div id="xo" class="container__image">
+        
+
+
+      <a href="" class="user-account"><i class="ri-customer-service-2-line"></i>
+        Support</a>
+
+
+        <!-- <img  src="assets/header.png" alt="header" /> -->
+      </div>
+
+    
+
+
+
+
+
+
+
+      <script>
+      // Function to check if an email is already registered
+      function isEmailRegistered(email) {
+            const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+            return allUsers.some(user => user.email === email);
+        }
+
+        // Function to save user data to localStorage
+        function saveUserData(userData) {
+            let allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+            allUsers.push(userData);
+            localStorage.setItem('allUsers', JSON.stringify(allUsers));
+        }
+
+        // Function to show popups
+        function showPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = 'block';
+            popup.style.animation = 'slideIn 0.5s forwards';
+
+            // Hide the popup after 3 seconds
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 3000);
+        }
+
+        // Form submission handler
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Get the form values
+            const fullName = document.getElementById('fullName').value;
+            const companyName = document.getElementById('companyName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Check if the email is already registered
+            if (isEmailRegistered(email)) {
+                // Show error popup saying "This User Mail Already Exists"
+                showPopup('errorPopup');
+                return; // Stop the form submission process
+            }
+
+            // Store user data in localStorage
+            const userData = {
+                fullName,
+                companyName,
+                email,
+                password
+            };
+
+            // Save the user data
+            saveUserData(userData);
+
+            // Show the success popup
+            showPopup('successPopup');
+
+            // Redirect to the login page after 3 seconds
+            setTimeout(function() {
+                window.location.href = 'login.html';
+            }, 3000);
+        });
+</script>
+
+  
+<script>
+    // Assuming this is the data saved during signup
+let userData = {
+    name: fullName,
+    companyName: companyName,
+    email: email,
+    password: password
+};
+
+// Save user data to localStorage
+localStorage.setItem('user_' + email, JSON.stringify(userData));
+localStorage.setItem('loggedInUser', email);  // Also save the email as a session identifier
+
+</script>
+
+
+
+
+
+
+    <script src="main.js"></script>
+    <script src="log.js"></script>
+  </body>
+</html>

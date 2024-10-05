@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    
+  <meta name="title" content="Welcome to FinAsset">
+  <meta name="description" content="FinAsset is your comprehensive solution for efficient asset management. Track, manage, and optimize your assets with ease.">
+  
+ 
+  
+    
+
+  <link rel="icon" href="assets/social (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="log.css" />
+    <title>FinAsset | Login</title>
+  </head>
+  <body>
+
+    <style>
+
+       /* Style for the popups */
+       .popup {
+            display: none;
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+            color: white;
+            animation: slideIn 0.5s forwards;
+        }
+
+        #successPopup {
+            background-color: #4caf50;
+        }
+
+        #errorPopup {
+            background-color: #f44336;
+        }
+
+        /* Slide-in animation for the popup */
+        @keyframes slideIn {
+            from {
+                bottom: -100px;
+                opacity: 0;
+            }
+            to {
+                bottom: 20px;
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <div class="container" id="loginForm">
+      <div class="container__content">
+        <a class="back" id="goBackLink" href="#"><i class="ri-arrow-left-line"></i></a>
+
+
+        <script>
+            document.getElementById("goBackLink").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default behavior of the link
+            
+                history.back(); // Go back to the previous page
+            });
+            </script>
+          
+
+        <h2>FinAsset<strong style="color: orangered;">.</strong></h2>
+        <h3>Welcome back!</h3>
+        <h1>Log In To Your Account</h1>
+        <form id="loginForm">
+          <label for="email">Email</label>
+          <div class="input__row">
+            <input type="email" id="email" placeholder="Enter Your Email" required />
+          </div>
+          <div class="input__header">
+            <label for="password">Password</label>
+            <a href="forget.html">Forgot Password?</a>
+          </div>
+          <div class="input__row">
+            <input type="password" id="password" placeholder="Password" required />
+          </div>
+          <button type="submit">LOGIN</button>
+        </form>
+      
+        <p>Don't have an account yet? <a href="signup.html">Create an Account</a></p>
+      </div>
+      <div id="xo" class="container__image">
+        
+ <!-- Success Popup -->
+ <div id="successPopup" class="popup">Login Successful</div>
+
+ <!-- Error Popup -->
+ <div id="errorPopup" class="popup">Incorrect Mail or Password</div>
+
+ <script>
+     // Function to check if the login credentials are correct
+     function validateCredentials(email, password) {
+         const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+         return allUsers.find(user => user.email === email && user.password === password);
+     }
+
+     // Function to show popups
+     function showPopup(popupId) {
+         const popup = document.getElementById(popupId);
+         popup.style.display = 'block';
+         popup.style.animation = 'slideIn 0.5s forwards';
+
+         // Hide the popup after 3 seconds
+         setTimeout(() => {
+             popup.style.display = 'none';
+         }, 3000);
+     }
+
+     // Form submission handler
+     document.getElementById('loginForm').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent default form submission behavior
+
+         // Get the form values
+         const email = document.getElementById('email').value;
+         const password = document.getElementById('password').value;
+
+         if (validateCredentials(email, password)) {
+    // Mark the user as logged in by saving their email or a flag to localStorage
+    localStorage.setItem('loggedInUser', email); // Store the user's email or some other identifier
+    showPopup('successPopup');
+
+    // Redirect to the index page after 3 seconds
+    setTimeout(function() {
+        window.location.href = 'index.html';
+    }, 3000);
+} else {
+    // Show error popup
+    showPopup('errorPopup');
+}
+
+     });
+ </script>
+
+      <a href="" class="user-account"><i class="ri-customer-service-2-line"></i>
+        Support</a>
+
+
+        <!-- <img  src="assets/header.png" alt="header" /> -->
+      </div>
+    </div>
+
+    
+    <script src="main.js"></script>
+    <script src="log.js"></script>
+  </body>
+</html>
