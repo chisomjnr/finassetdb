@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  min-height: 110vh;
+  min-height: 100vh;
   padding-inline: 1rem;
   display: grid;
   overflow: hidden;
@@ -224,7 +224,8 @@ margin-bottom: 20px;
   left: 10rem;
   height: 100%;
   width: 100vw;
-  background-color: #4d4b64;;
+  background-image: url('assets/Free Photo _ Successful and happy business team.jpg');
+  background-repeat: none;
   /* border-top-left-radius: 40px;
   border-bottom-left-radius: 40px; */
   z-index: -1;
