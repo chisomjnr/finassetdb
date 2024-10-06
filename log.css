@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 110vh;
   padding-inline: 1rem;
   display: grid;
   overflow: hidden;
