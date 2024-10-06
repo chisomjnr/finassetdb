@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title> FinAsset  | Notifications </title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="funddetail.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -320,7 +321,7 @@
   <section class="home-section">
     <header>
         <div class="text">
-           FinAsset  <i class="bx bx-chevron-right"></i>  <span style="color: orange; background: #ccd1dd; padding: 8px 20px; border-radius: 20px; cursor: pointer;"><i class="bx bx-bell"></i> Notifications</span>
+           FinAsset  <i class="bx bx-chevron-right"></i>  <span style="color: orange; background: #ccd1dd; padding: 8px 20px; border-radius: 20px; cursor: pointer;"><i class="bx bx-bell"></i> Form Preview</span>
         </div>
 
         <div class="header-content">
@@ -354,15 +355,13 @@
 .notification-container p {
     font-size: 18px;
     color: #484848;
-    text-align: center;
-    margin: 20px;
 }
 
     </style>
 
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
         <div style="text-align: left;">
-               <h1 style="font-size: 55px; color: #181818; line-height: 1.2;"">Notifications </h1>
+               <h1 style="font-size: 55px; color: #181818; line-height: 1.2;"">Fund Details </h1>
         
         </div>
         <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
@@ -371,20 +370,157 @@
    
    
     <br>
-    
-    <div class="notification-container">
-        <p>You currently don't have any notifications</p>
-    </div>
-    
+    <section class="body">
+    <section class="container">
+        <header>New Adjustment</header>
+        <form action="#" class="form">
+
+            <div class="input-box address">
+                <label style="color: orange;">Fund ID</label>
+              
+                <div class="column">
+                  <div class="select-box">
+                    <select>
+                      <option hidden>Select Fund ID</option>
+                      <option>0987</option>
+                      <option>0965</option>
+                      <option>0765</option>
+                      <option>0987</option>
+                    </select>
+                  </div>
+                  <input type="text" placeholder="Description" required />
+                </div>
+                <div class="column">
+                  <input type="text" placeholder="Book of Account" required />
+                  <div class="column">
+                    <div class="select-box">
+                      <select>
+                        <option hidden>Select Cuurency</option>
+                        <option>NGN</option>
+                        <option>USD</option>
+                        <option>RUC</option>
+                        <option>CUSD</option>
+                      </select>
+                    </div>
+              
+                  </div>
+            
+                </div>
+
+                <div class="column">
+             
+                    <input type="text" placeholder="Customer Center" required />
+                  </div>
+              </div>
+
+
+
+              <br>
+              <br>
+
+      
+                  <div class="input-box address">
+                      <label style="color: orange;">Parameters Adjustment Details</label>
+                    
+                      <div class="column">
+                        <div class="select-box">
+                          <select>
+                            <option hidden>Select Account ID</option>
+                            <option>0987</option>
+                            <option>0965</option>
+                            <option>0765</option>
+                            <option>0987</option>
+                          </select>
+                        </div>
+                        <div class="select-box">
+                            <select>
+                              <option hidden>Select Customer ID</option>
+                              <option>0987</option>
+                              <option>0965</option>
+                              <option>0765</option>
+                              <option>0987</option>
+                            </select>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="column">
+                        <div class="input-box">
+                            <label>Effective Date</label>
+                            <input type="date" placeholder="Enter birth date" required />
+                          </div>
+                        <div class="input-box">
+                          <label>Maturity Date</label>
+                          <input type="date" placeholder="Enter birth date" required />
+                        </div>
+                      </div>
+      <br>
+                      <div class="column">
+                        
+                        <div class="input-box">
+                            <label>Maturity Tenor</label>
+                            <input type="text" placeholder="(Days)" required />
+                          </div>
+
+
+
+                        <div class="input-box">
+                            <label>Adjustment Date</label>
+                            <input type="date" placeholder="Enter birth date" required />
+                          </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Interest Process Rate</option>
+                                  <option>Comm interest</option>
+                                  <option>0965</option>
+                                  <option>0765</option>
+                                  <option>0987</option>
+                                </select>
+                              </div>
+                    
+                              <input type="text" placeholder="New Interest Rate (%)" required />
+                        
+                          </div>
+
+                          <div class="column">
+
+                            <input type="text" placeholder="New Tenor (Days)" required />
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Change Interest Basics?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                           
+                          </div>
+                    </div>
+      
+
+<br>
+<br>
+          <div class="input-box">
+            <label>Remarks:</label>
+            <input type="text" placeholder="Input your remarks" required />
+          </div>
+        
+      
+  
+          <button>Commit Changes</button>
+        </form>
+      </section>
+    </section>
   
             
       </section>
 
 
 
-
-      <a href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>
-        Support</a>
 
 
 

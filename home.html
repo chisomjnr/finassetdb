@@ -99,134 +99,9 @@
 
 
       </style>
-
-
-
-
-<style>
-    
-.wrapper{
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  animation: show_toast 1s ease forwards;
-}
-@keyframes show_toast {
-  0%{
-    transform: translateX(-100%);
-  }
-  40%{
-    transform: translateX(10%);
-  }
-  80%, 100%{
-    transform: translateX(20px);
-  }
-}
-.wrapper.hide{
-  animation: hide_toast 1s ease forwards;
-}
-@keyframes hide_toast {
-  0%{
-    transform: translateX(20px);
-  }
-  40%{
-    transform: translateX(10%);
-  }
-  80%, 100%{
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-100%);
-  }
-}
-.wrapper .toast{
-  background: #fff;
-  padding: 20px 15px 20px 20px;
-  border-radius: 10px;
-  border-left: 5px solid #2ecc71;
-  box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
-  width: 430px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.wrapper .toast.offline{
-  border-color: #ccc;
-}
-.toast .content{
-  display: flex;
-  align-items: center;
-}
-.content .icon{
-  font-size: 25px;
-  color: #fff;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  background: #2ecc71;
-}
-.toast.offline .content .icon{
-  background: #ccc;
-}
-.content .details{
-  margin-left: 15px;
-}
-.details span{
-  font-size: 20px;
-  font-weight: 500;
-}
-.details p{
-  color: #878787;
-}
-.toast .close-icon{
-  color: #878787;
-  font-size: 23px;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  background: #f2f2f2;
-  transition: all 0.3s ease;
-}
-.close-icon:hover{
-  background: #efefef;
-}
-</style>
-
-
-
-
-
-
   </head>
-<body >
-    <div class="wrapper">
-    <div class="toast">
-        <div class="content">
-          <div class="icon"><i class="uil uil-wifi"></i></div>
-          <div class="details">
-            <span>You're online now</span>
-            <p>Hurray! Internet is connected.</p>
-          </div>
-        </div>
-        <div class="close-icon"><i class="uil uil-times"></i></div>
-      </div>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+<body>
+    
   <div class="sidebar">
     <div class="logo-details">
         <img src="assets/social (1).png" alt="">
@@ -278,7 +153,7 @@
          <i class='bx bx-chevron-down' id="customerChevron"></i>
        </a>
        <ul class="submenu" id="customerManagementSubmenu">
-         <li><a href="#"> <i class='bx bx-circle'></i> Home</a></li>
+         <li><a href=""> <i class='bx bx-circle'></i> Home</a></li>
          <li><a href="#"> <i class='bx bx-circle'></i> Customers</a></li>
          <li><a href="#"> <i class='bx bx-circle'></i> Messaging</a></li>
          <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
@@ -297,7 +172,7 @@
         <i class='bx bx-chevron-down' id="customerAccountChevron"></i>
     </a>
     <ul class="submenu" id="customerAccountSubmenu">
-        <li><a href="#"> <i class='bx bx-circle'></i> Home</a></li>
+        <li><a href="customer-account-home.html"> <i class='bx bx-circle'></i> Home</a></li>
         <li><a href="#"> <i class='bx bx-circle'></i> Setup</a></li>
         <li><a href="#"> <i class='bx bx-circle'></i> Operations</a></li>
         <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
@@ -394,20 +269,35 @@
      </li>
 
    
-     <!-- <li>
-       <a href="#">
-         <i class='bx bx-heart'></i>
-         <span class="links_name">Saved</span>
-       </a>
-       <span class="tooltip">Saved</span>
-     </li>
+   
+       
+     <br>
+     <div class="line"></div>
+     <br>
+
      <li>
-       <a href="#">
-         <i class='bx bx-cog'></i>
-         <span class="links_name">Setting</span>
-       </a>
-       <span class="tooltip">Setting</span>
-     </li> -->
+        <a href="Learn.html">
+          <i class='bx bx-book'></i>
+          <span class="links_name">Help Guide</span>
+        </a>
+        <span class="tooltip">Help</span>
+      </li>
+
+      <li>
+        <a   href="support.html">
+            <i class='ri-customer-service-2-line'></i>
+          <span class="links_name">Our Support</span>
+        </a>
+        <span class="tooltip">Support</span>
+      </li>
+
+      <li>
+        <a   href="support.html">
+            <i class='bx bx-gri-alt'></i>
+          <span class="links_name"></span>
+        </a>
+     
+      </li>
      <br>
      <br>
      <li class="profile">
@@ -441,10 +331,7 @@
 
         <div class="header-content">
             <!-- <h1>Your Website Title</h1> -->
-            <div class="user">
-                <a href="user.html"><i class="bx bx-cog"></i></a>
-            </div>
-           
+         
         </div>
 
         <div class="header-content">
@@ -463,7 +350,7 @@
         <p style="color: rgb(216, 216, 216);">by <strong>Globalseam</strong></p>
     </div>
     <br>
-    <p style="text-align: center; font-size: 15px; line-height: 1.2;">Feel free to checkout our <a style="color: orange;" href="guide.html">User guide</a> for easy navigation or contact our <a style="color: orange;" href="support.html">Support Team</a> for help.</p>
+    <p style="text-align: center; font-size: 15px; line-height: 1.2; margin-left: 20px; margin-right: 20px;">Feel free to checkout our <a style="color: orange;" href="guide.html">User guide</a> for easy navigation or contact our <a style="color: orange;" href="support.html">Support Team</a> for help.</p>
 <!--     
       <div class="text2"> Let's Get You Started</div> -->
 
@@ -991,60 +878,6 @@ function logout() {
 document.getElementById('log_out').addEventListener('click', logout);
 
 </script>
-
-
-
-<!-- INTERNET connection -->
-<SCRipt>
-    // Selecting all required elements
-const wrapper = document.querySelector(".wrapper"),
-toast = wrapper.querySelector(".toast"),
-title = toast.querySelector("span"),
-subTitle = toast.querySelector("p"),
-wifiIcon = toast.querySelector(".icon"),
-closeIcon = toast.querySelector(".close-icon");
-
-window.onload = ()=>{
-    function ajax(){
-        let xhr = new XMLHttpRequest(); //creating new XML object
-        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true); //sending get request on this URL
-        xhr.onload = ()=>{ //once ajax loaded
-            //if ajax status is equal to 200 or less than 300 that mean user is getting data from that provided url
-            //or his/her response status is 200 that means he/she is online
-            if(xhr.status == 200 && xhr.status < 300){
-                toast.classList.remove("offline");
-                title.innerText = "You're online now";
-                subTitle.innerText = "Hurray! Internet is connected.";
-                wifiIcon.innerHTML = '<i class="uil uil-wifi"></i>';
-                closeIcon.onclick = ()=>{ //hide toast notification on close icon click
-                    wrapper.classList.add("hide");
-                }
-                setTimeout(()=>{ //hide the toast notification automatically after 5 seconds
-                    wrapper.classList.add("hide");
-                }, 5000);
-            }else{
-                offline(); //calling offline function if ajax status is not equal to 200 or not less that 300
-            }
-        }
-        xhr.onerror = ()=>{
-            offline(); ////calling offline function if the passed url is not correct or returning 404 or other error
-        }
-        xhr.send(); //sending get request to the passed url
-    }
-
-    function offline(){ //function for offline
-        wrapper.classList.remove("hide");
-        toast.classList.add("offline");
-        title.innerText = "You're offline now";
-        subTitle.innerText = "Opps! Internet is disconnected.";
-        wifiIcon.innerHTML = '<i class="uil uil-wifi-slash"></i>';
-    }
-
-    setInterval(()=>{ //this setInterval function call ajax frequently after 100ms
-        ajax();
-    }, 100);
-}
-</SCRipt>
 
 </body>
 </html>

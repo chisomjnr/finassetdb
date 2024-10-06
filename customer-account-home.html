@@ -2,8 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> FinAsset  | Notifications </title>
+    <title> FinAsset  | Customer Accounts </title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="costumer-account.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -125,7 +126,7 @@
           </li>
     
           <li>
-            <a id="active" href="notification.html">
+            <a  href="notification.html">
               <i class='bx bx-bell'></i>
               <span class="links_name">Notifications</span>
             </a>
@@ -146,7 +147,7 @@
     
           <!-- Customer Management with Submenu -->
           <li>
-           <a href="#" class="dropdown-toggle" id="customerManagementBtn">
+           <a href="#"  class="dropdown-toggle" id="customerManagementBtn">
              <div>
                <i class='bx bx-user'></i>
                <span class="links_name">Customer Management</span>
@@ -173,7 +174,7 @@
             <i class='bx bx-chevron-down' id="customerAccountChevron"></i>
         </a>
         <ul class="submenu" id="customerAccountSubmenu">
-            <li><a href="customer-account-home.html"> <i class='bx bx-circle'></i> Home</a></li>
+            <li><a id="active" href="customer-account-home.html"> <i class='bx bx-circle'></i> Home</a></li>
             <li><a href="#"> <i class='bx bx-circle'></i> Setup</a></li>
             <li><a href="#"> <i class='bx bx-circle'></i> Operations</a></li>
             <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
@@ -320,7 +321,7 @@
   <section class="home-section">
     <header>
         <div class="text">
-           FinAsset  <i class="bx bx-chevron-right"></i>  <span style="color: orange; background: #ccd1dd; padding: 8px 20px; border-radius: 20px; cursor: pointer;"><i class="bx bx-bell"></i> Notifications</span>
+           FinAsset  <i class="bx bx-chevron-right"></i> Customer Accounts <i class="bx bx-chevron-right"></i> <span style="color: orange; background: #ccd1dd; padding: 8px 20px; border-radius: 20px; cursor: pointer;"><i class="bx bx-home"></i>Home</span>
         </div>
 
         <div class="header-content">
@@ -340,47 +341,294 @@
     </header>
 
     <style>
-    .notification-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    align-items: center;
-    height: 300px; /* Set a fixed height for the div */
-    border: 2px solid #d3d9e6; /* Optional: border for visibility */
-    border-radius: 10px; /* Optional: rounded corners */
-    background-color: #d3d9e6; /* Optional: background color */
-}
-
-.notification-container p {
-    font-size: 18px;
-    color: #484848;
-    text-align: center;
-    margin: 20px;
-}
-
-    </style>
-
-    <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
-        <div style="text-align: left;">
-               <h1 style="font-size: 55px; color: #181818; line-height: 1.2;"">Notifications </h1>
-        
-        </div>
-        <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
-    </div>
-    
-   
-   
-    <br>
-    
-    <div class="notification-container">
-        <p>You currently don't have any notifications</p>
-    </div>
-    
+      .popup-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.7);
+          display: none;
+          justify-content: center;
+          align-items: center;
+          z-index: 999;
+          overflow-y: scroll;
+          scrollbar-width: none; /* For Firefox */
+      }
   
-            
-      </section>
+      .popup-form {
+          background-color: white;
+          padding: 30px;
+          border-radius: 10px;
+          max-width: 800px;
+          width: 100%;
+          transform: translateY(100%);
+          animation: slide-in 0.5s forwards;
+      }
+  
+      @keyframes slide-in {
+          from {
+              transform: translateY(100%);
+          }
+          to {
+              transform: translateY(0);
+          }
+      }
+  
+      /* Show the popup */
+      .show-popup {
+          display: flex;
+      }
+  
+      /* Horizontal scrollable table */
+      .table-wrapper {
+          overflow-x: auto;
+          padding: 10px;
+          margin-top: 10px;
+      }
+  
+      .accounts-table {
+          width: 100%;
+          min-width: 1500px; /* Set minimum width to allow horizontal scrolling */
+          border-collapse: collapse;
+      }
+  
+      .accounts-table th, .accounts-table td {
+          padding: 10px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+      }
+  
+      /* Scrollbar styling */
+      .table-wrapper::-webkit-scrollbar {
+          height: 3px;
+      }
+  
+      .table-wrapper::-webkit-scrollbar-thumb {
+          background-color: orange;
+          border-radius: 10px;
+      }
+  
+      .table-wrapper::-webkit-scrollbar-thumb:hover {
+          background-color: #343434;
+      }
+  
+      .table-wrapper::-webkit-scrollbar {
+          background-color: #f1f1f1;
+      }
+  
+  </style>
+  
+  <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
+      <div style="text-align: left;">
+             <h1 style="font-size: 55px; color: #181818; line-height: 1.2;" line-height: 1.2;">Customer Accounts</h1>
+      </div>
+  </div>
+  
+  <br>
+  
+  <!-- Main Content Area -->
+  <main>
+      <div class="content-header">
+          <h2>Dashboard</h2>
+          <button class="add-btn" id="openPopupBtn"><i class="bx bx-upload"></i> Add New</button>
+      </div>
+  
+      <!-- Customer Accounts Table -->
+      <div class="table-wrapper">
+          <table class="accounts-table" id="accountsTable">
+              <thead>
+                  <tr>
+                      <th><input type="checkbox"></th>
+                      <th>Customer ID</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Password</th>
+                      <th>Time Joined</th>
+                      <th>Date Joined</th>
+                      <th>Account Status</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><input type="checkbox"></td>
+                      <td>CUST001</td>
+                      <td>John Doe</td>
+                      <td>john.doe@example.com</td>
+                      <td>*******</td>
+                      <td>10:30 AM</td>
+                      <td>2024-10-05</td>
+                      <td class="status active">Active</td>
+                      <td>
+                          <button class="view-btn">View</button>
+                          <button class="edit-btn">Edit</button>
+                          <button class="delete-btn">Delete</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </main>
+  
+  <!-- Popup Form for Add New -->
+  <div class="popup-overlay" id="popupOverlay">
+      <div class="popup-form">
+          <section class="body">
+              <section class="container">
+                  <header>
+                      <h1 style="font-size: 25px;">FinAsset<strong style="color: orange;">.</strong></h1>
+                  </header>
+                  <header>Create Customer</header>
+                  <form action="#" class="form" id="customerForm">
+                      <div class="input-box address">
+                          <label style="color: orange;">Details</label>
+                          <div class="column">
+                              <input type="text" id="firstName" placeholder="First Name" required />
+                              <input type="text" id="lastName" placeholder="Last Name" required />
+                          </div>
+                          <div class="column">
+                              <input type="email" id="email" placeholder="Email" required />
+                          </div>
+                          <div class="column">
+                              <input type="text" id="customerID" placeholder="Customer ID" readonly />
+                          </div>
 
+                          <div class="column">
+                            <input type="password" id="password" placeholder="Password" required />
+                        </div>
+                      </div>
+                  
+                      <button type="submit" id="commitChangesBtn">Commit Changes</button>
+                  </form>
+              </section>
+          </section>
+      </div>
+  </div>
+  
+  <script>
+   
+    const openPopupBtn = document.getElementById('openPopupBtn');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const customerForm = document.getElementById('customerForm');
+    const accountsTable = document.getElementById('accountsTable').getElementsByTagName('tbody')[0];
+    let customerCount = 1;
 
+    // Load saved customers from localStorage on page load
+    document.addEventListener('DOMContentLoaded', loadCustomers);
+
+    // Open the popup
+    openPopupBtn.addEventListener('click', () => {
+        popupOverlay.classList.add('show-popup');
+        generateCustomerID(); // Generate Customer ID when popup opens
+    });
+
+    // Close popup when clicking outside
+    popupOverlay.addEventListener('click', (event) => {
+        if (event.target === popupOverlay) {
+            popupOverlay.classList.remove('show-popup');
+        }
+    });
+
+    // Generate Customer ID automatically
+    function generateCustomerID() {
+        customerCount++; // Increment customer count for each new customer
+        const customerIDInput = document.getElementById('customerID');
+        customerIDInput.value = 'CUST' + ('000' + customerCount).slice(-3);
+    }
+
+    // Get current time in HH:MM AM/PM format
+    function getCurrentTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // hour '0' should be '12'
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        return hours + ':' + minutes + ' ' + ampm;
+    }
+
+    // Get current date in YYYY-MM-DD format
+    function getCurrentDate() {
+        const now = new Date();
+        return now.toISOString().split('T')[0];
+    }
+
+    // Handle form submission to add a new customer
+    customerForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Prevent form from refreshing the page
+
+        // Get form values
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const customerID = document.getElementById('customerID').value;
+        const timeJoined = getCurrentTime();
+        const dateJoined = getCurrentDate();
+
+        // Create new customer object
+        const newCustomer = {
+            customerID,
+            name: `${firstName} ${lastName}`,
+            email,
+            password,
+            timeJoined,
+            dateJoined,
+            status: 'Active'
+        };
+
+        // Add customer to table
+        addCustomerToTable(newCustomer);
+
+        // Save the customer data to localStorage
+        saveCustomer(newCustomer);
+
+        // Close the popup after adding
+        popupOverlay.classList.remove('show-popup');
+
+        // Clear the form fields for future entries
+        customerForm.reset();
+        generateCustomerID(); // Generate new customer ID for next entry
+    });
+
+    // Add customer to the table
+    function addCustomerToTable(customer) {
+        const newRow = accountsTable.insertRow();
+        newRow.innerHTML = `
+            <td><input type="checkbox"></td>
+            <td>${customer.customerID}</td>
+            <td>${customer.name}</td>
+            <td>${customer.email}</td>
+            <td>${'*'.repeat(customer.password.length)}</td> <!-- Password masked with * -->
+            <td>${customer.timeJoined}</td>
+            <td>${customer.dateJoined}</td>
+            <td class="status active">${customer.status}</td>
+            <td>
+                <button class="view-btn">View</button>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </td>
+        `;
+    }
+
+    // Save a customer to localStorage
+    function saveCustomer(customer) {
+        let customers = JSON.parse(localStorage.getItem('customers')) || [];
+        customers.push(customer);
+        localStorage.setItem('customers', JSON.stringify(customers));
+    }
+
+    // Load customers from localStorage and populate the table
+    function loadCustomers() {
+        let customers = JSON.parse(localStorage.getItem('customers')) || [];
+        customers.forEach(customer => addCustomerToTable(customer));
+        customerCount = customers.length; // Update customer count to match saved customers
+    }
+
+  </script>
+  
 
 
       <a href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>

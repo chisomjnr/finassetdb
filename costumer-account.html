@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Accounts Management - FinAsset</title>
+    <link rel="stylesheet" href="costumer-account.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>FinAsset</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Customer Accounts</a></li>
+                <li>
+                    <input type="text" class="search-bar" placeholder="Search by ID, Name or Email">
+                </li>
+                <li>
+                    <button class="search-btn">Go</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="content-header">
+            <h2>Customer Accounts</h2>
+            <button class="add-btn">Add New</button>
+        </div>
+
+        <!-- Customer Accounts Table -->
+        <table class="accounts-table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>Customer ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Account Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Row for Active Customer -->
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>CUST001</td>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td class="status active">Active</td>
+                    <td>
+                        <button class="view-btn">View</button>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Example Row for Inactive Customer -->
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>CUST002</td>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td class="status inactive">Inactive</td>
+                    <td>
+                        <button class="view-btn">View</button>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+
+</body>
+</html>
