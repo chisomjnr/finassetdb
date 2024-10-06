@@ -106,47 +106,56 @@
  <div id="errorPopup" class="popup">Incorrect Mail or Password</div>
 
  <script>
-     // Function to check if the login credentials are correct
-     function validateCredentials(email, password) {
-         const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
-         return allUsers.find(user => user.email === email && user.password === password);
-     }
+   // Function to check if the login credentials are correct
+function validateCredentials(email, password) {
+    // Hardcoded credentials for a specific user
+    const preAddedUser = { email: 'globalseam@gmail.com', password: '1234' };
 
-     // Function to show popups
-     function showPopup(popupId) {
-         const popup = document.getElementById(popupId);
-         popup.style.display = 'block';
-         popup.style.animation = 'slideIn 0.5s forwards';
+    // Check if the email and password match the pre-added user
+    if (email === preAddedUser.email && password === preAddedUser.password) {
+        return true;
+    }
 
-         // Hide the popup after 3 seconds
-         setTimeout(() => {
-             popup.style.display = 'none';
-         }, 3000);
-     }
-
-     // Form submission handler
-     document.getElementById('loginForm').addEventListener('submit', function(event) {
-         event.preventDefault(); // Prevent default form submission behavior
-
-         // Get the form values
-         const email = document.getElementById('email').value;
-         const password = document.getElementById('password').value;
-
-         if (validateCredentials(email, password)) {
-    // Mark the user as logged in by saving their email or a flag to localStorage
-    localStorage.setItem('loggedInUser', email); // Store the user's email or some other identifier
-    showPopup('successPopup');
-
-    // Redirect to the index page after 3 seconds
-    setTimeout(function() {
-        window.location.href = 'index.html';
-    }, 3000);
-} else {
-    // Show error popup
-    showPopup('errorPopup');
+    // Check against the users stored in localStorage
+    const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+    return allUsers.find(user => user.email === email && user.password === password);
 }
 
-     });
+// Function to show popups
+function showPopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.style.display = 'block';
+    popup.style.animation = 'slideIn 0.5s forwards';
+
+    // Hide the popup after 3 seconds
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 3000);
+}
+
+// Form submission handler
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    // Get the form values
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (validateCredentials(email, password)) {
+        // Mark the user as logged in by saving their email or a flag to localStorage
+        localStorage.setItem('loggedInUser', email); // Store the user's email or some other identifier
+        showPopup('successPopup');
+
+        // Redirect to the index page after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000);
+    } else {
+        // Show error popup
+        showPopup('errorPopup');
+    }
+});
+
  </script>
 
       <a href="" class="user-account"><i class="ri-customer-service-2-line"></i>
