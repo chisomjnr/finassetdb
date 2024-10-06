@@ -9,8 +9,9 @@ let userMessage = null;
 let isResponseGenerating = false;
 
 // API configuration
-const API_KEY = "PASTE-YOUR-API-KEY"; // Your API key here
+const API_KEY = "AIzaSyD_ngXaJUNQOoklpgxqXTMXCGWM6vFYjGA"; // Your API key here
 const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+
 
 // Load theme and chat data from local storage on page load
 const loadDataFromLocalstorage = () => {
@@ -126,7 +127,7 @@ const handleOutgoingChat = () => {
   isResponseGenerating = true;
 
   const html = `<div class="message-content">
-                  <img class="avatar" src="images/user.jpg" alt="User avatar">
+                  <img class="avatar" src="assets/user (4).png" alt="User avatar">
                   <p class="text"></p>
                 </div>`;
 

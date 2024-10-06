@@ -127,6 +127,8 @@ body.hide-header .header {
 
 .chat-list .message.incoming {
   margin-top: 1.5rem;
+  background: #322b1c;
+border-radius: 20px;
 }
 
 .chat-list .message .message-content {
@@ -134,10 +136,13 @@ body.hide-header .header {
   gap: 1.5rem;
   width: 100%;
   align-items: center;
+  background: #1e1c32;
+  padding: 20px;
+  border-radius: 20px;
 }
 
 .chat-list .message .text {
-  color: var(--text-color);
+  color: white;
   white-space: pre-wrap;
 }
 
@@ -153,7 +158,7 @@ body.hide-header .header {
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10px;
   align-self: flex-start;
 }
 
