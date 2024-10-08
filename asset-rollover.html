@@ -531,19 +531,17 @@
                         
                           <li><a href="#">Calculator</a></li>
                         
-                          <li><a  style="background: orange;"  href="#">Deposits ></a>
+                          <li><a  href="#">Deposits ></a>
                             <input type="checkbox" id="show-items">
                             <label for="show-items">Deposits</label>
                             <ul>
                              
                               <li><a href="call-deposit.html"> Call Deposits</a></li>
                             
-                              <li><a  href="fixed-deposit.html">Fixed Deposits</a></li>
+                              <li><a   href="fixed-deposit.html">Fixed Deposits</a></li>
                       
                     
-                              <li><a 
-                                style="background: orange;"  
-                                href="#">Additional Deposits  <i style="color: transparent;" class="bx bx-home"></i><i style="color: transparent;" class="bx bx-home"></i></a></li>
+                              <li><a href="additional-deposit.html">Additional Deposits  <i style="color: transparent;" class="bx bx-home"></i><i style="color: transparent;" class="bx bx-home"></i></a></li>
                               
                          
                     
@@ -565,7 +563,7 @@
                           <li><a href="asset-liquidation.html">Liquidation</a></li>
 
                           <li><a href="#">Cancellation</a></li>
-                          <li><a href="asset-rollover.html">Roll Over</a></li>
+                          <li><a style="background: orange;"  href="asset-rollover.html">Roll Over</a></li>
                           <li><a href="#">Interest / Tenor  Adjustment </a></li>
                        
                         </ul>
@@ -696,7 +694,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
         <div style="text-align: left;">
             <p>Non Unitized Fund - </p>
-               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;">Additional <br> Deposit </h1>
+               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;">New Rollover </h1>
         
         </div>
         <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
@@ -754,12 +752,12 @@
 
       
                   <div class="input-box address">
-                      <label style="color: orange;">Deposit Details</label>
+                      <label style="color: orange;">Previous Deal</label>
                     
                       <div class="column">
                         <div class="select-box">
                           <select>
-                            <option hidden> Select Account ID</option>
+                            <option hidden> Select Customer ID</option>
                             <option>0987</option>
                             <option>0965</option>
                             <option>0765</option>
@@ -768,7 +766,7 @@
                         </div>
                         <div class="select-box">
                             <select>
-                              <option hidden>Select Customer ID</option>
+                              <option hidden>Select Account ID</option>
                               <option>0987</option>
                               <option>0965</option>
                               <option>0765</option>
@@ -779,17 +777,11 @@
                       <br>
                       <div class="column">
                         <div class="input-box">
-                            <label> Funding Account?</label>
-                            <div class="select-box">
-                                <select>
-                                  <option >No</option>
-                                  <option>Yes</option>
-                           
-                                </select>
-                              </div>
+                            <label>Customer Name</label>
+                            <input type="text" placeholder="Enter Customer's Full Name..." required />
                           </div>
                         <div class="input-box">
-                          <label>Current Balance</label>
+                          <label>Product ID</label>
                           <input type="text" placeholder="Enter..." required />
                         </div>
                       </div>
@@ -797,59 +789,143 @@
                       <div class="column">
                         
                         <div class="input-box">
-                            <label> Additional Amount</label>
-                            <input type="text" placeholder="(Days)" required />
+                            <label>Effective Date</label>
+                            <input type="date" placeholder="Enter Effective date" required />
                           </div>
 
 
 
-                          <div class="input-box">
-                            <label> Reference</label>
-                            <input type="text" placeholder="Enter Reference" required />
+                        <div class="input-box">
+                            <label>Maturity Date</label>
+                            <input type="date" placeholder="Enter maturity date" required />
                           </div>
                         </div>
 
-                        <div class="column">
-                        
-                         
-                            <div class="input-box">
-                                <label> Description</label>
-                                <input type="text" placeholder="Enter Description" required />
-                              </div>
-    
-    
-    
-                              <div class="input-box">
-                                <label> Create New Deal</label>
-                                <input type="text" placeholder="Enter New Deal" required />
-                              </div>
-                            </div>
+                
 
                 
                         
                                 <div class="column">
-                                    <div class="input-box">
-                                        <label> Remark</label>
-                                        <input type="text" placeholder="Enter Remark" required />
-                                      </div>
+                                    <input type="text" placeholder="urrent Bal" required />
                                   
-                                    <div class="input-box">
-                                    <label>Effective Date</label>
-                                    <input type="date" placeholder="Enter Effective date" required />
-                                  </div>
+                                    <input type="text" placeholder="Accured Interest" required />
+                                
                                
                                 
                                     </div>
 
+                                    <div class="column">
+                                        <input type="text" placeholder="Income A?C ID" required />
+                                      
+                                        <input type="text" placeholder="Description" required />
+                                    
                                    
-             
-                       
+                                    
+                                        </div>
 
-                  
+
+                        <div class="column">
+
+
+                            
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Apply Tax?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+
+                              <div class="select-box">
+                                <select>
+                                  <option hidden>Pay Commission?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                              <input type="text" placeholder="Tax Rate" required />
+                        
+                          </div>
+
+
+                          <br>
+                          <label style="color: orange;"> New Deal</label>
+                          <div class="column">
+
+                            <input type="text" placeholder="Rollover Amount" required />
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Interest Process Type</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                            
+                          </div>
+
+                          <div class="column">
+                            <div class="input-box">
+                                <label>Rollover Date</label>
+                                <input type="date" placeholder="Enter Rollover date" required />
+                              </div>
+                          </div>
+
+                              <div class="column">
+                            <input type="text" placeholder="New Tenor (Days)" required />
+
+                            <input type="text" placeholder="New Interest Rate" required />
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Pay Interest Upfront</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                           
+                          </div>
+
+
+
+
+                          <div class="column">
+
+                       
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden> Commission Applicable?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                              <input type="text" placeholder="Reference" required />
+                           
+
+                              <input type="text" placeholder="Maturity Mandate" required />
+                          </div>
                     </div>
 
-         
+            
 
+<br>
+<br>
+          <div class="input-box">
+            <label>Remarks:</label>
+            <input type="text" placeholder="Input your remarks" required />
+          </div>
+        
+      
   
           <button>Commit Changes</button>
         </form>
