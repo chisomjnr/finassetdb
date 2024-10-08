@@ -508,7 +508,7 @@
     <li><a href="#">Investments</a></li>
     <li><a href="#">Cancel Investments</a></li>
     <li><a href="#">Sale - Before Maturity</a></li>
-    <li><a href="asset-liquidation.html">Liquidation - <br> Amotizing Bonus</a></li>
+    <li><a  "  href="asset-liquidation.html">Liquidation - <br> Amotizing Bonus</a></li>
     <li><a href="asset-liquidation.html">Liquidation - <br> At Maturity</a></li>
 
     <li><a href="#">Income Due</a></li>
@@ -531,14 +531,14 @@
                         
                           <li><a href="#">Calculator</a></li>
                         
-                          <li><a  style="background: orange;"  href="#">Deposits ></a>
+                          <li><a  href="#">Deposits ></a>
                             <input type="checkbox" id="show-items">
                             <label for="show-items">Deposits</label>
                             <ul>
                              
                               <li><a href="call-deposit.html"> Call Deposits</a></li>
                             
-                              <li><a  style="background: orange;"  href="fixed-deposit.html">Fixed Deposits</a></li>
+                              <li><a   href="fixed-deposit.html">Fixed Deposits</a></li>
                       
                     
                               <li><a href="additional-deposit.html">Additional Deposits  <i style="color: transparent;" class="bx bx-home"></i><i style="color: transparent;" class="bx bx-home"></i></a></li>
@@ -560,7 +560,7 @@
                           
                           <li><a href="#">Withdrawal Standing Orders</a></li>
                           <li><a href="#">Amendments</a></li>
-                          <li><a href="asset-liquidation.html">Liquidation</a></li>
+                          <li><a style="background: orange;"href="asset-liquidation.html">Liquidation</a></li>
 
                           <li><a href="#">Cancellation</a></li>
                           <li><a href="#">Roll Over</a></li>
@@ -694,7 +694,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
         <div style="text-align: left;">
             <p>Non Unitized Fund - </p>
-               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;">Customer <br> Fixed Deposit </h1>
+               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;"> Fund Liquidation </h1>
         
         </div>
         <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
@@ -752,12 +752,12 @@
 
       
                   <div class="input-box address">
-                      <label style="color: orange;">Deposit Details</label>
+                      <label style="color: orange;">Contribution Details</label>
                     
                       <div class="column">
                         <div class="select-box">
                           <select>
-                            <option hidden> Select Product ID</option>
+                            <option hidden> Select Account ID</option>
                             <option>0987</option>
                             <option>0965</option>
                             <option>0765</option>
@@ -777,62 +777,52 @@
                       <br>
                       <div class="column">
                         <div class="input-box">
-                            <label>Add Beneficiary?</label>
-                            <div class="select-box">
-                                <select>
-                                  <option >No</option>
-                                  <option>Yes</option>
-                           
-                                </select>
-                              </div>
+                            <label>Effective Date</label>
+                            <input type="date" placeholder="Enter Effective date" required />
                           </div>
-                        <div class="input-box">
-                          <label>Account Type</label>
-                          <input type="text" placeholder="Enter..." required />
-                        </div>
+                          <div class="input-box">
+                            <label>Maturity Date</label>
+                            <input type="date" placeholder="Enter Maturity date" required />
+                          </div>
                       </div>
-      <br>
+  
                       <div class="column">
                         
-                        <div class="input-box">
-                            <label> Tenor</label>
-                            <input type="text" placeholder="(Days)" required />
-                          </div>
+                     
+                            <input type="text" placeholder="Product" required />
+               
 
 
 
-                        <div class="input-box">
-                            <label>Maturity Date</label>
-                            <input type="date" placeholder="Enter maturity date" required />
-                          </div>
+                            <input type="text" placeholder="Account Interest" required />
                         </div>
 
                         <div class="column">
                         
-                         
-                        <div class="input-box">
-                            <label>Effective Date</label>
-                            <input type="date" placeholder="Enter Effective date" required />
-                          </div>
-    
-    
-    
-                          <div class="input-box">
-                            <label>Pay Interest Upfront?</label>
-                            <div class="select-box">
-                                <select>
-                                  <option >No</option>
-                                  <option>Yes</option>
-                           
-                                </select>
-                              </div>
-                          </div>
-                            </div>
+                     
+                            <input type="text" placeholder="Product Description" required />
+               
+
+
+
+                            <input type="text" placeholder="Current Balance" required />
+                        </div>
+
+                        <div class="column">
+                        
+                     
+                            <input type="text" placeholder="Upfront Interest" required />
+               
+
+
+
+                            <input type="text" placeholder="Commission Payable" required />
+                        </div>
 
                 
                         
                                 <div class="column">
-                                    <input type="text" placeholder="Deposite Amount" required />
+                                    <input type="text" placeholder="Amount" required />
                                   
                                   
                                 
@@ -842,34 +832,34 @@
 
                                     <br>
                                     <br>
-                                    <label style="color: orange;"> Interest Process</label>
+                                    <label style="color: orange;"> Liquidation Details</label>
 
                         <div class="column">
 
 
                             
-                            <div class="select-box">
-                                <select>
-                                  <option hidden>Select Interest Type</option>
-                                  <option>Comm interest</option>
-                             
-                                </select>
-                              </div>
+                          
                     
-                              <input type="text" placeholder=" Interest Rate (%)" required />
+                              <div class="input-box">
+                                <label>Liquidation Date</label>
+                                <input type="date" placeholder="Enter Liquidation date" required />
+                              </div>
                         
                           </div>
 
                           <div class="column">
 
-                            <input type="text" placeholder="Deposit Description" required />
+                            <input type="text" placeholder=" Reference" required />
+
+                            <input type="text" placeholder=" Transaction Description" required />
                         
-                            <div class="select-box">
+                        <div class="select-box">
                                 <select>
-                                  <option hidden>Use Interest Basics?</option>
-                              
-                                  <option>Yes</option>
-                                  <option>No</option>
+                                    
+                                  <option 
+                                  hidden>Customer Credit Account</option>
+                                  <option>Comm interest</option>
+                             
                                 </select>
                               </div>
                     
@@ -878,11 +868,20 @@
 
                           <div class="column">
 
-                            <input type="text" placeholder="Exception" required />
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Pay Instead?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+
+                            <input type="text" placeholder="Interest Amount" required />
                         
                             <div class="select-box">
                                 <select>
-                                  <option hidden>Select Funding Account</option>
+                                  <option hidden>Charge Penalty?</option>
                               
                                   <option>Yes</option>
                                   <option>No</option>
@@ -901,7 +900,7 @@
                         
                             <div class="select-box">
                                 <select>
-                                  <option hidden> Customer Create  Account</option>
+                                  <option hidden> Apply Fee?</option>
                               
                                   <option>Yes</option>
                                   <option>No</option>
@@ -911,61 +910,17 @@
                               <input type="text" placeholder="Cash Balance" required />
                            
 
-                              <div class="select-box">
-                                <select>
-                                  <option hidden> Commission Applicable?</option>
-                              
-                                  <option>Yes</option>
-                                  <option>No</option>
-                                </select>
-                              </div>
                           </div>
                     </div>
 
-                    <div class="input-box address">
-                    <br>
-                    <br>
-                    <label style="color: orange;"> Periodic Interest Payment</label>
-
-        <div class="column">
-
-
-            
-            <div class="select-box">
-                <select>
-                  <option hidden>Select Interest Type</option>
-                  <option>Comm interest</option>
-             
-                </select>
-              </div>
+                 
     
           
         
           </div>
       
           
-          <br>
-          <br>
-          <label style="color: orange;"> Other Details</label>
-
-<div class="column">
-
-
-  
-  <div class="select-box">
-      <select>
-        <option hidden>Maturity Mandate</option>
-        <option>Manual Processing</option>
-   
-      </select>
-    </div>
-
-    <input type="text" placeholder=" Officer" required />
-
-    <input type="text" placeholder=" Location" required />
-
-</div>
-                    </div>
+     
 
 <br>
 <br>

@@ -531,14 +531,14 @@
                         
                           <li><a href="#">Calculator</a></li>
                         
-                          <li><a  style="background: orange;"  href="#">Deposits ></a>
+                          <li><a  href="#">Deposits ></a>
                             <input type="checkbox" id="show-items">
                             <label for="show-items">Deposits</label>
                             <ul>
                              
                               <li><a href="call-deposit.html"> Call Deposits</a></li>
                             
-                              <li><a  style="background: orange;"  href="fixed-deposit.html">Fixed Deposits</a></li>
+                              <li><a  href="fixed-deposit.html">Fixed Deposits</a></li>
                       
                     
                               <li><a href="additional-deposit.html">Additional Deposits  <i style="color: transparent;" class="bx bx-home"></i><i style="color: transparent;" class="bx bx-home"></i></a></li>
@@ -556,7 +556,7 @@
                           <li><a href="#">Lien</a></li>
                   
                 
-                          <li><a href="asset-withdraw.html">Withdrawal</a></li>
+                          <li><a style="background: orange;"   href="asset-withdraw.html">Withdrawal</a></li>
                           
                           <li><a href="#">Withdrawal Standing Orders</a></li>
                           <li><a href="#">Amendments</a></li>
@@ -694,7 +694,7 @@
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
         <div style="text-align: left;">
             <p>Non Unitized Fund - </p>
-               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;">Customer <br> Fixed Deposit </h1>
+               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;"> Fund Withdrawal</h1>
         
         </div>
         <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
@@ -748,16 +748,15 @@
 
 
               <br>
-              <br>
-
+      
       
                   <div class="input-box address">
-                      <label style="color: orange;">Deposit Details</label>
+                  
                     
                       <div class="column">
                         <div class="select-box">
                           <select>
-                            <option hidden> Select Product ID</option>
+                            <option hidden> Select Account ID</option>
                             <option>0987</option>
                             <option>0965</option>
                             <option>0765</option>
@@ -777,7 +776,7 @@
                       <br>
                       <div class="column">
                         <div class="input-box">
-                            <label>Add Beneficiary?</label>
+                            <label>Consumer Credit Account</label>
                             <div class="select-box">
                                 <select>
                                   <option >No</option>
@@ -787,38 +786,82 @@
                               </div>
                           </div>
                         <div class="input-box">
-                          <label>Account Type</label>
-                          <input type="text" placeholder="Enter..." required />
+                          <label>Customer Name</label>
+                          <input type="text" placeholder="Enter Full Name..." required />
                         </div>
                       </div>
       <br>
                       <div class="column">
                         
                         <div class="input-box">
-                            <label> Tenor</label>
-                            <input type="text" placeholder="(Days)" required />
+                            <label> Product</label>
+                            <input type="text" placeholder="Product..." required />
                           </div>
 
 
 
-                        <div class="input-box">
-                            <label>Maturity Date</label>
-                            <input type="date" placeholder="Enter maturity date" required />
-                          </div>
-                        </div>
-
-                        <div class="column">
-                        
-                         
                         <div class="input-box">
                             <label>Effective Date</label>
                             <input type="date" placeholder="Enter Effective date" required />
                           </div>
+                        </div>
+
+
+
+                        
+                        <div class="column">
+                            <input type="text" placeholder="Reference " required />
+                          
+                          
+                            <input type="text" placeholder="Withdrawal Amount " required />
+                       
+                        
+                            </div>
+
+
+
+                            <div class="column">
+                                <input type="text" placeholder="Account Interest " required />
+                              
+                              
+                                <input type="text" placeholder="Transaction Description " required />
+                           
+                            
+                                </div>
+
+
+
+
+                        <div class="column">
+                        
+                         
+                            <div class="input-box">
+                                <label>Pay Interest?</label>
+                                <div class="select-box">
+                                    <select>
+                                      <option >No</option>
+                                      <option>Yes</option>
+                               
+                                    </select>
+                                  </div>
+                              </div>
     
     
     
                           <div class="input-box">
-                            <label>Pay Interest Upfront?</label>
+                            <label>Charge Penalty?</label>
+                            <div class="select-box">
+                                <select>
+                                  <option >No</option>
+                                  <option>Yes</option>
+                           
+                                </select>
+                              </div>
+                          </div>
+
+
+                          <div class="input-box">
+                            <label>Capitalize Interest?</label>
                             <div class="select-box">
                                 <select>
                                   <option >No</option>
@@ -832,41 +875,25 @@
                 
                         
                                 <div class="column">
-                                    <input type="text" placeholder="Deposite Amount" required />
+                                    <input type="text" placeholder="Penalty Rate (%)" required />
                                   
-                                  
+                                    <input type="text" placeholder="Penalty Amount" required />
                                 
                                
                                 
                                     </div>
 
                                     <br>
-                                    <br>
-                                    <label style="color: orange;"> Interest Process</label>
+                              
 
-                        <div class="column">
-
-
-                            
-                            <div class="select-box">
-                                <select>
-                                  <option hidden>Select Interest Type</option>
-                                  <option>Comm interest</option>
-                             
-                                </select>
-                              </div>
-                    
-                              <input type="text" placeholder=" Interest Rate (%)" required />
-                        
-                          </div>
+                   
 
                           <div class="column">
 
-                            <input type="text" placeholder="Deposit Description" required />
-                        
+                    
                             <div class="select-box">
                                 <select>
-                                  <option hidden>Use Interest Basics?</option>
+                                  <option hidden>Apply Fee?</option>
                               
                                   <option>Yes</option>
                                   <option>No</option>
@@ -876,21 +903,7 @@
                            
                           </div>
 
-                          <div class="column">
-
-                            <input type="text" placeholder="Exception" required />
-                        
-                            <div class="select-box">
-                                <select>
-                                  <option hidden>Select Funding Account</option>
-                              
-                                  <option>Yes</option>
-                                  <option>No</option>
-                                </select>
-                              </div>
-                    
-                           
-                          </div>
+                       
 
 
 
@@ -899,73 +912,10 @@
 
                        
                         
-                            <div class="select-box">
-                                <select>
-                                  <option hidden> Customer Create  Account</option>
-                              
-                                  <option>Yes</option>
-                                  <option>No</option>
-                                </select>
-                              </div>
-                    
-                              <input type="text" placeholder="Cash Balance" required />
-                           
-
-                              <div class="select-box">
-                                <select>
-                                  <option hidden> Commission Applicable?</option>
-                              
-                                  <option>Yes</option>
-                                  <option>No</option>
-                                </select>
-                              </div>
-                          </div>
+                         
                     </div>
-
-                    <div class="input-box address">
-                    <br>
-                    <br>
-                    <label style="color: orange;"> Periodic Interest Payment</label>
-
-        <div class="column">
-
 
             
-            <div class="select-box">
-                <select>
-                  <option hidden>Select Interest Type</option>
-                  <option>Comm interest</option>
-             
-                </select>
-              </div>
-    
-          
-        
-          </div>
-      
-          
-          <br>
-          <br>
-          <label style="color: orange;"> Other Details</label>
-
-<div class="column">
-
-
-  
-  <div class="select-box">
-      <select>
-        <option hidden>Maturity Mandate</option>
-        <option>Manual Processing</option>
-   
-      </select>
-    </div>
-
-    <input type="text" placeholder=" Officer" required />
-
-    <input type="text" placeholder=" Location" required />
-
-</div>
-                    </div>
 
 <br>
 <br>
@@ -1193,7 +1143,7 @@
             // Redirect to the login page
             window.location.href = 'login.html';
         }
-        
+         
         </script>
     
     <script>
