@@ -4,6 +4,7 @@
   background: #11101D;
 z-index: 9999;
   width: 100%;
+
 }
 .wrapper nav{
   position: relative;
@@ -69,6 +70,7 @@ nav .content .links{
 
 .wrapper .search-box{
   position: absolute;
+
   height: 100%;
   max-width: calc(100% - 50px);
   width: 100%;
@@ -78,6 +80,7 @@ nav .content .links{
 }
 .wrapper #show-search:checked ~ .search-box{
   opacity: 1;
+  display: none;
   pointer-events: auto;
 }
 .search-box input{
@@ -86,6 +89,7 @@ nav .content .links{
   border: none;
   outline: none;
   font-size: 17px;
+  display: none;
   color: #fff;
   background: #171c24;
   padding: 0 100px 0 15px;
@@ -138,7 +142,7 @@ nav .content .links{
 .content .links ul ul{
   position: absolute;
   top: 0;
-  right: calc(-100% + 18px);
+  right: calc(-100% + 50px);
   z-index: 99999;
   border: 1px solid #4a5872;
 }
@@ -215,6 +219,12 @@ nav .content .links{
 
 
 
+/* @media screen and (max-width: 900px){
+
+  nav .content .links{
+      display: none;
+  }
+} */
 
 
 

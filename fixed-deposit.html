@@ -5,6 +5,7 @@
     <title> FinAsset  | Asset Management </title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="home2.css">
+    <link rel="stylesheet" href="funddetail.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -346,7 +347,7 @@
               
                 <ul class="links">
 
-                  <li><a style="background: orange;" href="#">Home</a></li>
+                  <li><a href="assetm-home.html">Home</a></li>
                 
             
                   <li>
@@ -473,7 +474,7 @@
                   </li>
 
                   <li>
-                    <a href="#" class="desktop-link">Non Unitized Funds<i class="bx bx-chevron-down"></i></a>
+                    <a  style="background: orange;"  href="#" class="desktop-link">Non Unitized Funds<i class="bx bx-chevron-down"></i></a>
                     <input type="checkbox" id="show-services">
                     <label for="show-services">Non Unitized Funds</label>
                     <ul>
@@ -520,7 +521,7 @@
                         </ul>
 
                       </li>
-                      <li><a href="#">Deposits ></a>
+                      <li><a  style="background: orange;"  href="#">Deposits ></a>
 
 
 
@@ -530,14 +531,14 @@
                         
                           <li><a href="#">Calculator</a></li>
                         
-                          <li><a href="#">Deposits ></a>
+                          <li><a  style="background: orange;"  href="#">Deposits ></a>
                             <input type="checkbox" id="show-items">
                             <label for="show-items">Deposits</label>
                             <ul>
                              
                               <li><a href="#"> Call Deposits</a></li>
                             
-                              <li><a href="fixed-deposit.html">Fixed Deposits</a></li>
+                              <li><a  style="background: orange;"  href="fixed-deposit.html">Fixed Deposits</a></li>
                       
                     
                               <li><a href="#">Additional Deposits  <i style="color: transparent;" class="bx bx-home"></i><i style="color: transparent;" class="bx bx-home"></i></a></li>
@@ -692,7 +693,8 @@
 
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
         <div style="text-align: left;">
-         <h1 style="font-size: 35px; color: #181818; line-height: 1.2;"">Asset Management </h1>
+            <p>Non Unitized Fund - </p>
+               <h1 style="font-size: 45px; color: #181818; line-height: 1.2;">Customer <br> Fixed Deposit </h1>
         
         </div>
         <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
@@ -702,108 +704,300 @@
    
     <br>
     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js CDN -->
-    <style>
-        .body2  {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: poppins, sans-serif;
-        }
+ 
+    <section class="body">
+    <section class="container">
+        <header></header>
+        <form action="#" class="form">
 
-        .chart-wrapper {
-            text-align: center;
-            background: white;
-            margin: 40px;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 4px 10px rgba(28, 28, 28, 0.16);
-        }
+            <div class="input-box address">
+                <label style="color: orange;">Fund Details</label>
+              
+                <div class="column">
+                    <input type="text" placeholder="Fund ID" required />
+                  <input type="text" placeholder="Book of Account" required />
+                </div>
 
-        .chart-container {
-            width: 500px;
-            height: 500px;
-            margin: 0 auto;
-        }
+                <div class="column">
+                  <input type="text" placeholder="Cost Center" required />
+                
+                  <div class="select-box">
+                    <select>
+                      <option hidden>Currency</option>
+                      <option>USD</option>
+                      <option>EUR</option>
+                      <option>GBP</option>
 
-       .chart-wrapper h4 {
-            font-size: 24px;
-            margin: 20px;
-            color: #1d1b31;
-         
-        
+                    </select>
+                  </div>
+              
+                  </div>
 
-        }
+                  <div class="column">
+                    <input type="text" placeholder="Description" required />
+                  
+                  
+                
+                    </div>
+            
+                </div>
 
-        .chart-container .chartjs-legend {
-            margin-top: 340px; /* Add margin top to the legend */
-            display: flex;
-            justify-content: center;
-            font-size: 16px; /* Increased font size for the legend */
-        }
-    </style>
+               
+              </div>
 
-<section class=".body2">
 
-<div class="chart-wrapper">
-    <h4>Pie Data Of Current Assets</h4> <!-- Heading for the chart -->
-    <div class="chart-container">
-        <canvas id="doughnutChart"></canvas> <!-- Doughnut chart -->
-    </div>
-</div>
 
-<script>
- const ctx = document.getElementById('doughnutChart').getContext('2d');
+              <br>
+              <br>
 
-const data = {
-    labels: ['Unitized', 'Individual', 'Non-unitized'],
-    datasets: [{
-        label: 'Asset Breakdown',
-        data: [30, 38, 100 - (30 + 38)], // The remaining percentage for Non-unitized
-        backgroundColor: [
-            '#4CAF50',  // Green for Unitized
-            '#FFC107',  // Amber for Individual
-            '#F44336'   // Red for Non-unitized
-        ],
-        hoverOffset: 4
-    }]
-};
-
-const config = {
-    type: 'doughnut',
-    data: data,
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'bottom', // Move legend to the bottom
-                labels: {
-                    font: {
-                        size: 18, // Increase font size for the legend
+      
+                  <div class="input-box address">
+                      <label style="color: orange;">Deposit Details</label>
+                    
+                      <div class="column">
+                        <div class="select-box">
+                          <select>
+                            <option hidden> Select Product ID</option>
+                            <option>0987</option>
+                            <option>0965</option>
+                            <option>0765</option>
+                            <option>0987</option>
+                          </select>
+                        </div>
+                        <div class="select-box">
+                            <select>
+                              <option hidden>Select Customer ID</option>
+                              <option>0987</option>
+                              <option>0965</option>
+                              <option>0765</option>
+                              <option>0987</option>
+                            </select>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="column">
+                        <div class="input-box">
+                            <label>Add Beneficiary?</label>
+                            <div class="select-box">
+                                <select>
+                                  <option >No</option>
+                                  <option>Yes</option>
+                           
+                                </select>
+                              </div>
+                          </div>
+                        <div class="input-box">
+                          <label>Account Type</label>
+                          <input type="text" placeholder="Enter..." required />
+                        </div>
+                      </div>
+      <br>
+                      <div class="column">
                         
-                    },
-                },
-            },
-            tooltip: {
-                callbacks: {
-                    label: function(tooltipItem) {
-                        const value = data.datasets[0].data[tooltipItem.dataIndex];
-                        return `${data.labels[tooltipItem.dataIndex]}: ${value}%`;
-                    }
-                }
-            }
-        }
-    }
-};
+                        <div class="input-box">
+                            <label> Tenor</label>
+                            <input type="text" placeholder="(Days)" required />
+                          </div>
 
-const doughnutChart = new Chart(ctx, config);
-</script>
+
+
+                        <div class="input-box">
+                            <label>Maturity Date</label>
+                            <input type="date" placeholder="Enter maturity date" required />
+                          </div>
+                        </div>
+
+                        <div class="column">
+                        
+                         
+                        <div class="input-box">
+                            <label>Effective Date</label>
+                            <input type="date" placeholder="Enter Effective date" required />
+                          </div>
+    
+    
+    
+                          <div class="input-box">
+                            <label>Pay Interest Upfront?</label>
+                            <div class="select-box">
+                                <select>
+                                  <option >No</option>
+                                  <option>Yes</option>
+                           
+                                </select>
+                              </div>
+                          </div>
+                            </div>
+
+                
+                        
+                                <div class="column">
+                                    <input type="text" placeholder="Deposite Amount" required />
+                                  
+                                  
+                                
+                               
+                                
+                                    </div>
+
+                                    <br>
+                                    <br>
+                                    <label style="color: orange;"> Interest Process</label>
+
+                        <div class="column">
+
+
+                            
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Select Interest Type</option>
+                                  <option>Comm interest</option>
+                             
+                                </select>
+                              </div>
+                    
+                              <input type="text" placeholder=" Interest Rate (%)" required />
+                        
+                          </div>
+
+                          <div class="column">
+
+                            <input type="text" placeholder="Deposit Description" required />
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Use Interest Basics?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                           
+                          </div>
+
+                          <div class="column">
+
+                            <input type="text" placeholder="Exception" required />
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden>Select Funding Account</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                           
+                          </div>
+
+
+
+
+                          <div class="column">
+
+                       
+                        
+                            <div class="select-box">
+                                <select>
+                                  <option hidden> Customer Create  Account</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                    
+                              <input type="text" placeholder="Cash Balance" required />
+                           
+
+                              <div class="select-box">
+                                <select>
+                                  <option hidden> Commission Applicable?</option>
+                              
+                                  <option>Yes</option>
+                                  <option>No</option>
+                                </select>
+                              </div>
+                          </div>
+                    </div>
+
+                    <div class="input-box address">
+                    <br>
+                    <br>
+                    <label style="color: orange;"> Periodic Interest Payment</label>
+
+        <div class="column">
+
+
+            
+            <div class="select-box">
+                <select>
+                  <option hidden>Select Interest Type</option>
+                  <option>Comm interest</option>
+             
+                </select>
+              </div>
+    
+          
+        
+          </div>
+      
+          
+          <br>
+          <br>
+          <label style="color: orange;"> Other Details</label>
+
+<div class="column">
+
 
   
-            
+  <div class="select-box">
+      <select>
+        <option hidden>Maturity Mandate</option>
+        <option>Manual Processing</option>
+   
+      </select>
+    </div>
+
+    <input type="text" placeholder=" Officer" required />
+
+    <input type="text" placeholder=" Location" required />
+
+</div>
+                    </div>
+
+<br>
+<br>
+          <div class="input-box">
+            <label>Remarks:</label>
+            <input type="text" placeholder="Input your remarks" required />
+          </div>
+        
+      
+  
+          <button>Commit Changes</button>
+        </form>
+        <br>
       </section>
+    
+    </section>
+
+    <br>
+    <br>
+
+
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -812,10 +1006,6 @@ const doughnutChart = new Chart(ctx, config);
         Support</a>
 
 
-
-      <div>
-
-      </div>
   </section>
 
 

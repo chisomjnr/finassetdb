@@ -8,8 +8,12 @@
 }
 
 body{
-    background: #E4E9F7;
+    background: #11101D;
+    overflow-x: hidden;
 }
+
+
+
 
 #span{
     color: orange;
@@ -266,6 +270,7 @@ border-bottom-left-radius: 20px;
   position: relative;
   background: #E4E9F7;
   min-height: 100vh;
+
   top: 0;
   left: 78px;
   width: calc(100% - 78px);
@@ -400,6 +405,8 @@ color: grey;
 
 
 .welcome-section {
+  
+
     position: relative; /* To position the text */
     text-align: center; /* Center the text */
     color: white; /* Text color */
@@ -772,7 +779,7 @@ color: grey;
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #E4E9F7; /* Background color of the scrollbar track */
+    background:  #11101D;; /* Background color of the scrollbar track */
     border-radius: 10px; /* Round the corners of the scrollbar track */
   }
   
