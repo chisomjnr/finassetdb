@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title> FinAsset  | Home </title>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home2.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -25,7 +26,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
    /* Additional styles for the submenu */
-.submenu {
+   /* Additional styles for the submenu */
+   .submenu {
     background: #312b1b;
     padding: 10px;
     border-radius: 10px;
@@ -130,131 +132,62 @@
 
 
       <!-- Customer Management with Submenu -->
-      <li>
-       <a href="#" class="dropdown-toggle" id="customerManagementBtn">
-         <div>
-           <i class='bx bx-user'></i>
-           <span class="links_name">Customer Management</span>
-         </div>
-         <i class='bx bx-chevron-down' id="customerChevron"></i>
-       </a>
-       <ul class="submenu" id="customerManagementSubmenu">
-         <li><a href=""> <i class='bx bx-circle'></i> Home</a></li>
-         <li><a href="#"> <i class='bx bx-circle'></i> Customers</a></li>
-         <li><a href="#"> <i class='bx bx-circle'></i> Messaging</a></li>
-         <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
-       </ul>
+      
+
+     <li>
+      <a href="customer-management-home.html">
+        <i class='bx bx-user'></i>
+        <span class="links_name">Customer Management</span>
+      </a>
        <span class="tooltip">Customer Management</span>
-     </li>
+    </li>
 
    <!-- Customer Account Menu -->
+
 <li>
-    <a href="javascript:void(0)" class="dropdown-toggle" id="customerAccountBtn">
-        <div>
-            <i class='bx bxs-user-account'></i>
-            <span class="links_name">Customer Account</span>
-           
-        </div>
-        <i class='bx bx-chevron-down' id="customerAccountChevron"></i>
-    </a>
-    <ul class="submenu" id="customerAccountSubmenu">
-        <li><a href="customer-account-home.html"> <i class='bx bx-circle'></i> Home</a></li>
-        <li><a href="#"> <i class='bx bx-circle'></i> Setup</a></li>
-        <li><a href="#"> <i class='bx bx-circle'></i> Operations</a></li>
-        <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
-    </ul>
-    <span class="tooltip">Customer Account</span>
+  <a href="customer-account-home.html">
+    <i class='bx bxs-user-account'></i>
+    <span class="links_name">Customer Account</span>
+  </a>
+   <span class="tooltip">Customer Account</span>
 </li>
+
+ 
 
 
      <!-- Assets Management -->
      <li>
-       <a href="#" class="dropdown-toggle" id="assetManagementBtn">
-         <div>
-           <i class='bx bx-pie-chart-alt-2'></i>
-           <span class="links_name">Asset Management</span>
-         </div>
-         <i class='bx bx-chevron-down' id="chevron"></i>
-       </a>
-       <ul class="submenu" id="assetManagementSubmenu">
-         <li><a href="#"> <i class='bx bx-circle'></i> Home</a></li>
-         <li><a href="#"> <i class='bx bx-circle'></i> Setup</a></li>
-         <li><a href="#"> <i class='bx bx-circle'></i> Individual Funds</a></li>
-         <li>
-
-            <li> <a href="#" class="dropdown-toggle" id="nonUtilizedFundsBtn">
-                  <span> Non Utilized Funds</span>
-                <i class='bx bx-chevron-down' id="nonUtilizedChevron"></i>
-              </a></li>
-           
-           <ul class="nested-submenu" id="nonUtilizedFundsSubmenu">
-            <li><a href="#"> <i class='bx bx-circle'></i> Fund Management</a></li>
-            <li><a href="#"> <i class='bx bx-circle'></i> Fees</a></li>
-            <li><a href="#"> <i class='bx bx-circle'></i> Enquiries</a></li>
-            <li>
-                <a href="#" class="dropdown-toggle" id="depositsBtn">
-                  <div>
-                    <span> > Deposits</span>
-                  </div>
-                  <i class='bx bx-chevron-down' id="depositsChevron"></i>
-                </a>
-                <ul class="nested-submenu2" id="depositsSubmenu">
-                  <li><a href="#"> <i class='bx bx-circle'></i> Calculator</a></li>
-                  <li><a href="#"> <i class='bx bx-circle'></i> Lien</a></li>
-                  <li><a href="#"> <i class='bx bx-circle'></i> Amendments</a></li>
-                  <li><a href="#"> <i class='bx bx-circle'></i> Withdraw</a></li>
-                  <li>
-                    <a href="#" class="dropdown-toggle" id="deposits2Btn">
-                      <div>
-                        <span> > Deposits</span>
-                      </div>
-                      <i class='bx bx-chevron-down' id="deposits2Chevron"></i>
-                    </a>
-                    <ul class="nested-submenu2" id="deposits2Submenu">
-                      <li><a href="#"> <i class='bx bx-circle'></i> Call Deposits</a></li>
-                      <li><a href="#"> <i class='bx bx-circle'></i> Fixed Deposits</a></li>
-                      <li><a href="#"> <i class='bx bx-circle'></i> Additional Deposits</a></li>
-                      <li><a href="#"> <i class='bx bx-circle'></i> Merge Deposits</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-           </ul>
-         </li>
-       </ul>
+      <a href="assetm-home.html">
+        <i class='bx bxs-bar-chart-alt-2'></i>
+  <span class="links_name">Asset Management</span>
+      </a>
        <span class="tooltip">Assets</span>
-     </li>
+    </li>
 
      
 
-    <!-- Account Management with Submenu -->
-<li>
-    <a href="#" class="dropdown-toggle" id="accountManagementBtn">
-      <div>
-        <i class='bx bx-user-circle'></i>
-        <span class="links_name">Account Management</span>
-      </div>
-      <i class='bx bx-chevron-down' id="accountManagementChevron"></i>
-    </a>
-    <ul class="submenu" id="accountManagementSubmenu">
-      <li><a href="#"> <i class='bx bx-circle'></i> Account Info</a></li>
-      <li><a href="#"> <i class='bx bx-circle'></i> Account Settings</a></li>
-      <li><a href="#"> <i class='bx bx-circle'></i> Billing</a></li>
-      <li><a href="#"> <i class='bx bx-circle'></i> Security</a></li>
-    </ul>
-    <span class="tooltip">Account Management</span>
-  </li>
 
+
+
+
+    <!-- Account Management with Submenu -->
+   <li>
+      <a href="assetm-home.html">
+        <i class='bx bxs-group'></i>
+  <span class="links_name">Account Management</span>
+      </a>
+       <span class="tooltip">Account Management</span>
+    </li>
   
      <li>
        <a href="administrator.html">
-         <i class='bx bx-cart-alt'></i>
+         <i class='bx bx-shield'></i>
          <span class="links_name">Administrator</span>
        </a>
        <span class="tooltip">Administrator</span>
      </li>
 
-   
+<!--    
      <br>
      <div class="line"></div>
      <br>
@@ -269,11 +202,11 @@
     </li>
 
     <li>
-      <a   href="finai.html">
+      <a   href="SeamAi.html">
           <i class='bx bx-grid-alt'></i>
-        <span class="links_name">FinAi | <strong>Coming Soon</strong></span>
+        <span class="links_name">SeamAi | <strong>Coming Soon</strong></span>
       </a>
-      <span class="tooltip">FinAi</span>
+      <span class="tooltip">SeamAi</span>
     </li>
 <br>
     <div class="line"></div>
@@ -292,15 +225,9 @@
           <span class="links_name">Our Support</span>
         </a>
         <span class="tooltip">Support</span>
-      </li>
+      </li> -->
 
-      <li>
-        <a   href="support.html">
-            <i class='bx bx-gri-alt'></i>
-          <span class="links_name"></span>
-        </a>
-     
-      </li>
+  
      <br>
      <br>
      <li class="profile">
@@ -319,34 +246,80 @@
 
 
 
-
-
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+  
+    // Check localStorage for sidebar state on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const isSidebarOpen = localStorage.getItem("sidebar-open");
+  
+      if (isSidebarOpen === "true") {
+        sidebar.classList.add("open");
+      } else {
+        sidebar.classList.remove("open");
+      }
+      menuBtnChange(); // Update the button icon based on sidebar state
+    });
+  
+    // Toggle sidebar open/close and save the state to localStorage
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      updateSidebarState(); // Save the state when sidebar is toggled
+    });
+  
+    searchBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      updateSidebarState(); // Save the state when sidebar is toggled
+    });
+  
+    // Function to update sidebar state in localStorage
+    function updateSidebarState() {
+      const isOpen = sidebar.classList.contains("open");
+      localStorage.setItem("sidebar-open", isOpen); // Save the state (true or false)
+      menuBtnChange(); // Update the button icon
+    }
+  
+    // Function to change sidebar button icon (optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); // Replacing the icon class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); // Replacing the icon class
+      }
+    }
+  </script>
+  
 
 
 
   <!-- Main Screen -->
 
   <section class="home-section">
-    <header>
-        <div class="text">
-           FinAsset  <i class="bx bx-chevron-right"></i>  <span style="color: orange; background: #ccd1dd; padding: 8px 20px; border-radius: 20px; cursor: pointer;"><i class="bx bx-home"></i> Home</span>
-        </div>
-
-        <div class="header-content">
-            <!-- <h1>Your Website Title</h1> -->
+  
+      <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
          
-        </div>
-
-        <div class="header-content">
-            <!-- <h1>Your Website Title</h1> -->
-            <div class="search-container">
-                <i class="bx bx-search"></i>
-                <input type="text" placeholder="Search...">
-                <button type="submit">GO</button>
-            </div>
-           
-        </div>
-    </header>
+          </div>
+          <div class="hqi">
+            <a href="notification.html"><i class="bx bx-bell"></i></a>
+            <a href="support.html"><i  class="ri-customer-service-2-line"></i></a> 
+            <a href="SeamAi.html"><i  class="bx bx-brain"></i></a> 
+          </div>
+          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+          <form action="#" class="search-box">
+            <input type="text" placeholder="Type Something to Search..." required>
+            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+          </form>
+        </nav>
+      </div>
+ 
    
     <div class="welcome-section">
         <h1>Welcome to FinAsset<strong style="color: orange;">.</strong></h1>
@@ -467,420 +440,181 @@
 
 
 
-
-  <script>
-let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let searchBtn = document.querySelector(".bx-search");
-let submenus = document.querySelectorAll('.submenu');  // Select all submenus
-
-// To keep track of submenus that were open before the sidebar was closed
-let previouslyOpenSubmenus = [];
-
-// Dropdown elements for Asset Management
-let assetManagementBtn = document.getElementById('assetManagementBtn');
-let assetManagementSubmenu = document.getElementById('assetManagementSubmenu');
-let chevron = document.getElementById('chevron');
-
-// Dropdown elements for Non Utilized Funds (nested dropdown)
-let nonUtilizedFundsBtn = document.getElementById('nonUtilizedFundsBtn');
-let nonUtilizedFundsSubmenu = document.getElementById('nonUtilizedFundsSubmenu');
-let nonUtilizedChevron = document.getElementById('nonUtilizedChevron');
-
-// Dropdown elements for Deposits (nested dropdown inside Non Utilized Funds)
-let depositsBtn = document.getElementById('depositsBtn');
-let depositsSubmenu = document.getElementById('depositsSubmenu');
-let depositsChevron = document.getElementById('depositsChevron');
-
-// Dropdown elements for Deposits (nested dropdown inside Non Utilized Funds)
-let deposits2Btn = document.getElementById('deposits2Btn');
-let deposits2Submenu = document.getElementById('deposits2Submenu');
-let deposits2Chevron = document.getElementById('deposits2Chevron');
-
-// Dropdown elements for Customer Management
-let customerManagementBtn = document.getElementById('customerManagementBtn');
-let customerManagementSubmenu = document.getElementById('customerManagementSubmenu');
-let customerChevron = document.getElementById('customerChevron');
-
-// Dropdown elements for Customer Account
-let customerAccountBtn = document.getElementById('customerAccountBtn');
-let customerAccountSubmenu = document.getElementById('customerAccountSubmenu');
-let customerAccountChevron = document.getElementById('customerAccountChevron');
-
-// Dropdown elements for Account Management
-let accountManagementBtn = document.getElementById('accountManagementBtn');
-let accountManagementSubmenu = document.getElementById('accountManagementSubmenu');
-let accountManagementChevron = document.getElementById('accountManagementChevron');
-
-// Function to toggle submenu with animation
-function toggleSubmenu(submenu, chevronIcon) {
-    submenu.classList.toggle('open');
     
-    if (submenu.classList.contains('open')) {
-        submenu.style.maxHeight = submenu.scrollHeight + "px";  // Set height to auto-expand
-        chevronIcon.classList.add('rotate');
-    } else {
-        submenu.style.maxHeight = 0;  // Collapse the submenu
-        chevronIcon.classList.remove('rotate');
-    }
-}
-
-// Account Management submenu toggle functionality
-accountManagementBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(accountManagementSubmenu, accountManagementChevron);  // Toggle submenu with animation
-  }
-});
-
-// Customer Account submenu toggle functionality
-customerAccountBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(customerAccountSubmenu, customerAccountChevron);  // Toggle submenu with animation
-  }
-});
-
-// Asset Management submenu toggle functionality
-assetManagementBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(assetManagementSubmenu, chevron);  // Toggle submenu with animation
-  }
-});
-
-// Non Utilized Funds submenu toggle functionality (nested submenu)
-nonUtilizedFundsBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(nonUtilizedFundsSubmenu, nonUtilizedChevron);  // Toggle submenu with animation
-  }
-});
-
-// Deposits submenu toggle functionality (nested submenu)
-depositsBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(depositsSubmenu, depositsChevron);  // Toggle submenu with animation
-  }
-});
-
-// Deposits2 submenu toggle functionality (nested submenu)
-deposits2Btn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(deposits2Submenu, deposits2Chevron);  // Toggle submenu with animation
-  }
-});
-
-// Customer Management submenu toggle functionality
-customerManagementBtn.addEventListener('click', () => {
-  if (sidebar.classList.contains("open")) {
-    toggleSubmenu(customerManagementSubmenu, customerChevron);  // Toggle submenu with animation
-  }
-});
-
-// Function to toggle sidebar open/close and store the state
-closeBtn.addEventListener("click", () => {
-  if (sidebar.classList.contains("open")) {
-    // Save the state of open submenus before closing
-    storeOpenSubmenus();
-    closeAllSubmenus();  // Close submenus before closing the sidebar
-    setTimeout(() => {
-      sidebar.classList.remove("open");
-      menuBtnChange();
-      toggleChevronDisplay();
-      localStorage.setItem('sidebarState', 'closed');
-    }, 300);  // Adjust this delay as needed
-  } else {
-    sidebar.classList.add("open");
-    menuBtnChange();
-    toggleChevronDisplay();
-    reopenPreviouslyOpenSubmenus();  // Restore open submenus
-    localStorage.setItem('sidebarState', 'open');
-  }
-});
-
-// Search button click also toggles sidebar open/close
-searchBtn.addEventListener("click", () => {
-  if (sidebar.classList.contains("open")) {
-    storeOpenSubmenus();  // Save the state of open submenus
-    closeAllSubmenus();
-    setTimeout(() => {
-      sidebar.classList.remove("open");
-      menuBtnChange();
-      toggleChevronDisplay();
-      localStorage.setItem('sidebarState', 'closed');
-    }, 300);
-  } else {
-    sidebar.classList.add("open");
-    menuBtnChange();
-    toggleChevronDisplay();
-    reopenPreviouslyOpenSubmenus();
-    localStorage.setItem('sidebarState', 'open');
-  }
-});
-
-// Store the open submenus before closing the sidebar
-function storeOpenSubmenus() {
-  previouslyOpenSubmenus = [];
-  submenus.forEach(submenu => {
-    if (submenu.classList.contains('open')) {
-      previouslyOpenSubmenus.push(submenu);
-    }
-  });
-}
-
-// Reopen submenus that were open before the sidebar closed
-function reopenPreviouslyOpenSubmenus() {
-  previouslyOpenSubmenus.forEach(submenu => {
-    submenu.classList.add('open');
-    submenu.style.maxHeight = submenu.scrollHeight + "px";  // Restore maxHeight
-    let chevronIcon = submenu.previousElementSibling.querySelector('.bx-chevron-down');
-    if (chevronIcon) {
-      chevronIcon.classList.add('rotate');
-    }
-  });
-}
-
-// Close all submenus function
-function closeAllSubmenus() {
-  submenus.forEach(submenu => {
-    submenu.classList.remove('open');
-    submenu.style.maxHeight = 0;  // Collapse submenu
-    let chevronIcon = submenu.previousElementSibling.querySelector('.bx-chevron-down');
-    if (chevronIcon) {
-      chevronIcon.classList.remove('rotate');
-    }
-  });
-}
-
-// Check the stored sidebar state on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const sidebarState = localStorage.getItem('sidebarState');
-  if (sidebarState === 'open') {
-    sidebar.classList.add('open');
-    menuBtnChange();
-    toggleChevronDisplay();
-  } else if (sidebarState === 'closed') {
-    sidebar.classList.remove('open');
-    menuBtnChange();
-    toggleChevronDisplay();
-  }
-});
-
-// Functionality for buttons with the 'dropdown-toggle' class to open side menu if it's closed
-document.querySelectorAll('.dropdown-toggle').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (!sidebar.classList.contains('open')) {
-      sidebar.classList.add('open');
-      menuBtnChange();
-      toggleChevronDisplay();
-      const submenu = btn.nextElementSibling;
-      const chevronIcon = btn.querySelector('.bx-chevron-down');
-      if (submenu && chevronIcon) {
-        submenu.style.maxHeight = submenu.scrollHeight + "px";  // Open submenu
-        chevronIcon.classList.add('rotate');
-      }
-    }
-  });
-});
-
-// Function to toggle chevron display when sidebar is opened/closed
-function toggleChevronDisplay() {
-  let chevrons = document.querySelectorAll('.bx-chevron-down');
-  if (sidebar.classList.contains("open")) {
-    chevrons.forEach(chevron => {
-      chevron.style.display = "block";
-    });
-  } else {
-    chevrons.forEach(chevron => {
-      chevron.style.display = "none";
-    });
-  }
-}
-
-// Optional: Change menu button icon when clicked
-function menuBtnChange() {
-  if (sidebar.classList.contains("open")) {
-    closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-  } else {
-    closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-  }
-}
-
-
-</script>
-
-
-
-
-
-<!-- Time & Date -->
-<script>
-    function updateClock() {
-        const clockElement = document.getElementById("digitalClock");
-        const now = new Date();
-        
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        let ampm = hours >= 12 ? 'PM' : 'AM';
-
-        hours = hours % 12;
-        hours = hours ? hours : 12; // Convert hour '0' to '12'
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-
-        const currentTime = hours + ':' + minutes + ' ' + ampm;
-        clockElement.innerHTML = currentTime;
-    }
-
-    function updateDate() {
-        const dateElement = document.getElementById("currentDate");
-        const now = new Date();
-        
-        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const months = [
-            'January', 'February', 'March', 'April', 'May', 'June',
-            'July', 'August', 'September', 'October', 'November', 'December'
-        ];
-
-        const dayOfWeek = days[now.getDay()];
-        const dayOfMonth = now.getDate();
-        const month = months[now.getMonth()];
-        const year = now.getFullYear();
-
-        const suffix = (dayOfMonth % 10 === 1 && dayOfMonth !== 11) ? 'st' :
-                       (dayOfMonth % 10 === 2 && dayOfMonth !== 12) ? 'nd' :
-                       (dayOfMonth % 10 === 3 && dayOfMonth !== 13) ? 'rd' : 'th';
-
-        const currentDate = `${dayOfWeek} ${dayOfMonth}${suffix} ${year}`;
-        dateElement.innerHTML = currentDate;
-    }
-
-    setInterval(updateClock, 1000); // Update clock every second
-    updateClock(); // Initial call to display the clock immediately
-    updateDate();  // Display the current date immediately
-</script>
-
-
-
-
-
-
-<script>
-    // Universal function to check if a user is logged in
-    function checkLoginStatus() {
-        const loggedInUser = localStorage.getItem('loggedInUser');
-        if (!loggedInUser) {
-            // If no user is logged in, redirect to the login page
-            window.location.href = 'login.html';
-        }
-    }
     
-    // Call the function on page load
-    checkLoginStatus();
     
-    </script>
-
-<script>
-    // Function to display the company name
-    function displayCompanyName() {
-        // Get the logged-in user's email from localStorage
-        const loggedInUserEmail = localStorage.getItem('loggedInUser');
-
-        if (loggedInUserEmail) {
-            // Retrieve the user data using the email as the key
-            const userData = JSON.parse(localStorage.getItem('user_' + loggedInUserEmail));
-
-            if (userData && userData.companyName) {
-                // Update the innerHTML of the div with the company name
-                document.querySelector('.name').innerHTML = userData.companyName;
-            }
-        } else {
-            // If no user is logged in, redirect to login page
-            window.location.href = 'login.html';
-        }
-    }
-
-    // Call the function on page load
-    displayCompanyName();
-</script>
-
     
-
-    
-<!-- Date & Time -->
+    <!-- Time & Date -->
     <script>
-      function displayLastLogoutTime() {
-    const lastLogoutTimeString = localStorage.getItem('lastLogoutTime');
-
-    if (lastLogoutTimeString) {
-        const lastLogoutTime = new Date(lastLogoutTimeString);
-        const currentTime = new Date();
-        const timeDifference = currentTime - lastLogoutTime;
-        const millisecondsInADay = 24 * 60 * 60 * 1000;
-
-        let timeLabel = '';
-        const lastLogoutDate = lastLogoutTime.getDate();
-        const currentDate = currentTime.getDate();
-
-        if (currentDate === lastLogoutDate) {
-            timeLabel = 'Today';
-        } else if (currentDate - lastLogoutDate === 1) {
-            timeLabel = 'Yesterday';
-        } else {
-            const daysAgo = Math.floor(timeDifference / millisecondsInADay);
-            if (daysAgo <= 7) {
-                timeLabel = `${daysAgo} days ago`;
-            } else {
-                const options = { weekday: 'long', month: 'long', day: 'numeric' };
-                timeLabel = lastLogoutTime.toLocaleDateString(undefined, options);
+        function updateClock() {
+            const clockElement = document.getElementById("digitalClock");
+            const now = new Date();
+            
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let ampm = hours >= 12 ? 'PM' : 'AM';
+    
+            hours = hours % 12;
+            hours = hours ? hours : 12; // Convert hour '0' to '12'
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+    
+            const currentTime = hours + ':' + minutes + ' ' + ampm;
+            clockElement.innerHTML = currentTime;
+        }
+    
+        function updateDate() {
+            const dateElement = document.getElementById("currentDate");
+            const now = new Date();
+            
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = [
+                'January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'
+            ];
+    
+            const dayOfWeek = days[now.getDay()];
+            const dayOfMonth = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+    
+            const suffix = (dayOfMonth % 10 === 1 && dayOfMonth !== 11) ? 'st' :
+                           (dayOfMonth % 10 === 2 && dayOfMonth !== 12) ? 'nd' :
+                           (dayOfMonth % 10 === 3 && dayOfMonth !== 13) ? 'rd' : 'th';
+    
+            const currentDate = `${dayOfWeek} ${dayOfMonth}${suffix} ${year}`;
+            dateElement.innerHTML = currentDate;
+        }
+    
+        setInterval(updateClock, 1000); // Update clock every second
+        updateClock(); // Initial call to display the clock immediately
+        updateDate();  // Display the current date immediately
+    </script>
+    
+    
+    
+    
+    
+    
+    <script>
+        // Universal function to check if a user is logged in
+        function checkLoginStatus() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (!loggedInUser) {
+                // If no user is logged in, redirect to the login page
+                window.location.href = 'login.html';
             }
         }
-
-        const timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
-        const formattedTime = lastLogoutTime.toLocaleTimeString(undefined, timeOptions);
-
-        // Update the innerHTML of the h4 inside the #lastLogout div
-        document.getElementById('lastLogout').querySelector('h4').innerHTML = `<strong>${timeLabel},</strong> ${formattedTime}`;
-    } else {
-        // If there's no logout time stored, display a default message
-        document.getElementById('lastLogout').querySelector('h4').innerHTML = '<strong>Never Logged Out</strong>';
-    }
-}
-
-// Call the function on page load
-displayLastLogoutTime();
-
-    </script>
-
-
-
-<!-- Logout -->
-<script>
-  
-    function logout() {
-        // Save the current time as the logout time
-        const logoutTime = new Date();
-        localStorage.setItem('lastLogoutTime', logoutTime);
+        
+        // Call the function on page load
+        checkLoginStatus();
+        
+        </script>
     
+    <script>
+        // Function to display the company name
+        function displayCompanyName() {
+            // Get the logged-in user's email from localStorage
+            const loggedInUserEmail = localStorage.getItem('loggedInUser');
+    
+            if (loggedInUserEmail) {
+                // Retrieve the user data using the email as the key
+                const userData = JSON.parse(localStorage.getItem('user_' + loggedInUserEmail));
+    
+                if (userData && userData.companyName) {
+                    // Update the innerHTML of the div with the company name
+                    document.querySelector('.name').innerHTML = userData.companyName;
+                }
+            } else {
+                // If no user is logged in, redirect to login page
+                window.location.href = 'login.html';
+            }
+        }
+    
+        // Call the function on page load
+        displayCompanyName();
+    </script>
+    
+        
+    
+        
+    <!-- Date & Time -->
+        <script>
+          function displayLastLogoutTime() {
+        const lastLogoutTimeString = localStorage.getItem('lastLogoutTime');
+    
+        if (lastLogoutTimeString) {
+            const lastLogoutTime = new Date(lastLogoutTimeString);
+            const currentTime = new Date();
+            const timeDifference = currentTime - lastLogoutTime;
+            const millisecondsInADay = 24 * 60 * 60 * 1000;
+    
+            let timeLabel = '';
+            const lastLogoutDate = lastLogoutTime.getDate();
+            const currentDate = currentTime.getDate();
+    
+            if (currentDate === lastLogoutDate) {
+                timeLabel = 'Today';
+            } else if (currentDate - lastLogoutDate === 1) {
+                timeLabel = 'Yesterday';
+            } else {
+                const daysAgo = Math.floor(timeDifference / millisecondsInADay);
+                if (daysAgo <= 7) {
+                    timeLabel = `${daysAgo} days ago`;
+                } else {
+                    const options = { weekday: 'long', month: 'long', day: 'numeric' };
+                    timeLabel = lastLogoutTime.toLocaleDateString(undefined, options);
+                }
+            }
+    
+            const timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+            const formattedTime = lastLogoutTime.toLocaleTimeString(undefined, timeOptions);
+    
+            // Update the innerHTML of the h4 inside the #lastLogout div
+            document.getElementById('lastLogout').querySelector('h4').innerHTML = `<strong>${timeLabel},</strong> ${formattedTime}`;
+        } else {
+            // If there's no logout time stored, display a default message
+            document.getElementById('lastLogout').querySelector('h4').innerHTML = '<strong>Never Logged Out</strong>';
+        }
+    }
+    
+    // Call the function on page load
+    displayLastLogoutTime();
+    
+        </script>
+    
+    
+    
+    <!-- Logout -->
+    <script>
+      
+        function logout() {
+            // Save the current time as the logout time
+            const logoutTime = new Date();
+            localStorage.setItem('lastLogoutTime', logoutTime);
+        
+            // Remove the login data from localStorage
+            localStorage.removeItem('loggedInUser');
+            
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        }
+        
+        </script>
+    
+    <script>
+        // Function to handle logging out
+    function logout() {
         // Remove the login data from localStorage
         localStorage.removeItem('loggedInUser');
         
-        // Redirect to the login page
+        // Redirect the user to the login page
         window.location.href = 'login.html';
     }
     
-    </script>
-
-<script>
-    // Function to handle logging out
-function logout() {
-    // Remove the login data from localStorage
-    localStorage.removeItem('loggedInUser');
+    // Attach the logout function to the logout icon
+    document.getElementById('log_out').addEventListener('click', logout);
     
-    // Redirect the user to the login page
-    window.location.href = 'login.html';
-}
-
-// Attach the logout function to the logout icon
-document.getElementById('log_out').addEventListener('click', logout);
-
-</script>
-
-</body>
-</html>
+    </script>
+    
+    </body>
+    </html>

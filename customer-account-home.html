@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title> FinAsset  | Customer Accounts </title>
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="costumer-account.css">
+    <link rel="stylesheet" href="home2.css">
+    <link rel="stylesheet" href="customer-account-home.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
@@ -104,246 +105,249 @@
 
   </head>
 <body>
-    <div class="sidebar">
-        <div class="logo-details">
-            <img src="assets/social (1).png" alt="">
-            <div class="logo_name">FinAsset<span id="span">.</span></div>
-            <i class='bx bx-menu' id="btn" ></i>
-        </div>
-        <ul class="nav-list">
-          <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" placeholder="Search in sidebar...">
-             <span class="tooltip">Search</span>
-          </li>
-          
-          <li>
-            <a href="index.html">
-              <i class='bx bx-home-alt'></i>
-              <span class="links_name">Home</span>
-            </a>
-             <span class="tooltip">Home</span>
-          </li>
-    
-        
-    <br>
-          <div class="line"></div>
-          <br>
-    
-    
-          <!-- Customer Management with Submenu -->
-          <li>
-           <a href="#"  class="dropdown-toggle" id="customerManagementBtn">
-             <div>
-               <i class='bx bx-user'></i>
-               <span class="links_name">Customer Management</span>
-             </div>
-             <i class='bx bx-chevron-down' id="customerChevron"></i>
-           </a>
-           <ul class="submenu" id="customerManagementSubmenu">
-             <li><a href="#"> <i class='bx bx-circle'></i> Home</a></li>
-             <li><a href="#"> <i class='bx bx-circle'></i> Customers</a></li>
-             <li><a href="#"> <i class='bx bx-circle'></i> Messaging</a></li>
-             <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
-           </ul>
-           <span class="tooltip">Customer Management</span>
-         </li>
-    
-       <!-- Customer Account Menu -->
-    <li>
-        <a href="javascript:void(0)" class="dropdown-toggle" id="customerAccountBtn">
-            <div>
-                <i class='bx bxs-user-account'></i>
-                <span class="links_name">Customer Account</span>
-               
-            </div>
-            <i class='bx bx-chevron-down' id="customerAccountChevron"></i>
-        </a>
-        <ul class="submenu" id="customerAccountSubmenu">
-            <li><a id="active" href="customer-account-home.html"> <i class='bx bx-circle'></i> Home</a></li>
-            <li><a href="#"> <i class='bx bx-circle'></i> Setup</a></li>
-            <li><a href="#"> <i class='bx bx-circle'></i> Operations</a></li>
-            <li><a href="#"> <i class='bx bx-circle'></i> Reports</a></li>
-        </ul>
-        <span class="tooltip">Customer Account</span>
-    </li>
-    
-    
-         <!-- Assets Management -->
-         <li>
-           <a href="#" class="dropdown-toggle" id="assetManagementBtn">
-             <div>
-               <i class='bx bx-pie-chart-alt-2'></i>
-               <span class="links_name">Asset Management</span>
-             </div>
-             <i class='bx bx-chevron-down' id="chevron"></i>
-           </a>
-           <ul class="submenu" id="assetManagementSubmenu">
-             <li><a href="#"> <i class='bx bx-circle'></i> Home</a></li>
-             <li><a href="#"> <i class='bx bx-circle'></i> Setup</a></li>
-             <li><a href="#"> <i class='bx bx-circle'></i> Individual Funds</a></li>
-             <li>
-    
-                <li> <a href="#" class="dropdown-toggle" id="nonUtilizedFundsBtn">
-                      <span> Non Utilized Funds</span>
-                    <i class='bx bx-chevron-down' id="nonUtilizedChevron"></i>
-                  </a></li>
-               
-               <ul class="nested-submenu" id="nonUtilizedFundsSubmenu">
-                <li><a href="#"> <i class='bx bx-circle'></i> Fund Management</a></li>
-                <li><a href="#"> <i class='bx bx-circle'></i> Fees</a></li>
-                <li><a href="#"> <i class='bx bx-circle'></i> Enquiries</a></li>
-                <li>
-                    <a href="#" class="dropdown-toggle" id="depositsBtn">
-                      <div>
-                        <span> > Deposits</span>
-                      </div>
-                      <i class='bx bx-chevron-down' id="depositsChevron"></i>
-                    </a>
-                    <ul class="nested-submenu2" id="depositsSubmenu">
-                      <li><a href="#"> <i class='bx bx-circle'></i> Calculator</a></li>
-                      <li><a href="#"> <i class='bx bx-circle'></i> Lien</a></li>
-                      <li><a href="#"> <i class='bx bx-circle'></i> Amendments</a></li>
-                      <li><a href="#"> <i class='bx bx-circle'></i> Withdraw</a></li>
-                      <li>
-                        <a href="#" class="dropdown-toggle" id="deposits2Btn">
-                          <div>
-                            <span> > Deposits</span>
-                          </div>
-                          <i class='bx bx-chevron-down' id="deposits2Chevron"></i>
-                        </a>
-                        <ul class="nested-submenu2" id="deposits2Submenu">
-                          <li><a href="#"> <i class='bx bx-circle'></i> Call Deposits</a></li>
-                          <li><a href="#"> <i class='bx bx-circle'></i> Fixed Deposits</a></li>
-                          <li><a href="#"> <i class='bx bx-circle'></i> Additional Deposits</a></li>
-                          <li><a href="#"> <i class='bx bx-circle'></i> Merge Deposits</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-               </ul>
-             </li>
-           </ul>
-           <span class="tooltip">Assets</span>
-         </li>
-    
-         
-    
-        <!-- Account Management with Submenu -->
-    <li>
-        <a href="#" class="dropdown-toggle" id="accountManagementBtn">
-          <div>
-            <i class='bx bx-user-circle'></i>
-            <span class="links_name">Account Management</span>
-          </div>
-          <i class='bx bx-chevron-down' id="accountManagementChevron"></i>
-        </a>
-        <ul class="submenu" id="accountManagementSubmenu">
-          <li><a href="#"> <i class='bx bx-circle'></i> Account Info</a></li>
-          <li><a href="#"> <i class='bx bx-circle'></i> Account Settings</a></li>
-          <li><a href="#"> <i class='bx bx-circle'></i> Billing</a></li>
-          <li><a href="#"> <i class='bx bx-circle'></i> Security</a></li>
-        </ul>
-        <span class="tooltip">Account Management</span>
+  <div class="sidebar">
+    <div class="logo-details">
+        <img src="assets/social (1).png" alt="">
+        <div class="logo_name">FinAsset<span id="span">.</span></div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search in sidebar...">
+         <span class="tooltip">Search</span>
       </li>
-    
       
-         <li>
-           <a href="administrator.html">
-             <i class='bx bx-cart-alt'></i>
-             <span class="links_name">Administrator</span>
-           </a>
-           <span class="tooltip">Administrator</span>
-         </li>
-    
-       
-         <br>
-         <div class="line"></div>
-         <br>
-    
-    
-         <li>
-          <a href="notification.html">
-            <i class='bx bx-bell'></i>
-            <span class="links_name">Notifications</span>
-          </a>
-          <span class="tooltip">Notifications</span>
-        </li>
-    
-        <li>
-          <a   href="finai.html">
-              <i class='bx bx-grid-alt'></i>
-            <span class="links_name">FinAi | <strong>Coming Soon</strong></span>
-          </a>
-          <span class="tooltip">FinAi</span>
-        </li>
-    <br>
-        <div class="line"></div>
-        <br>
-         <li>
-            <a href="Learn.html">
-              <i class='bx bx-book'></i>
-              <span class="links_name">Help Guide</span>
-            </a>
-            <span class="tooltip">Help</span>
-          </li>
-    
-          <li>
-            <a   href="support.html">
-                <i class='ri-customer-service-2-line'></i>
-              <span class="links_name">Our Support</span>
-            </a>
-            <span class="tooltip">Support</span>
-          </li>
+      <li>
+        <a  href="index.html">
+          <i class='bx bx-home-alt'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
 
-          <li>
-            <a   href="support.html">
-                <i class='bx bx-gri-alt'></i>
-              <span class="links_name"></span>
-            </a>
-         
-          </li>
+
+<br>
+      <div class="line"></div>
+      <br>
+
+
+      <!-- Customer Management with Submenu -->
+      
+
+     <li>
+      <a href="customer-management-home.html">
+        <i class='bx bx-user'></i>
+        <span class="links_name">Customer Management</span>
+      </a>
+       <span class="tooltip">Customer Management</span>
+    </li>
+
+   <!-- Customer Account Menu -->
+
+<li>
+  <a id="active" href="customer-account-home.html">
+    <i class='bx bxs-user-account'></i>
+    <span class="links_name">Customer Account</span>
+  </a>
+   <span class="tooltip">Customer Account</span>
+</li>
+
  
-         <br>
-         <br>
-         <li class="profile">
-             <div class="profile-details">
-               <div class="name_job">
-                 <div class="name">Company Name</div>
-                 <div class="job">by <strong>Globalseam</strong></div>
-               </div>
-             </div>
-             <i class='bx bx-log-out' id="log_out"></i>
-    
-         </li>
-        </ul>
-      </div>
+
+
+    <!-- Assets Management -->
+    <li>
+      <a href="assetm-home.html">
+        <i class='bx bxs-bar-chart-alt-2'></i>
+  <span class="links_name">Asset Management</span>
+      </a>
+       <span class="tooltip">Assets</span>
+    </li>
+
+     
+
+
+
+
+
+    <!-- Account Management with Submenu -->
+   <li>
+      <a href="assetm-home.html">
+        <i class='bx bxs-group'></i>
+  <span class="links_name">Account Management</span>
+      </a>
+       <span class="tooltip">Account Management</span>
+    </li>
+  
+     <li>
+       <a href="administrator.html">
+         <i class='bx bx-shield'></i>
+         <span class="links_name">Administrator</span>
+       </a>
+       <span class="tooltip">Administrator</span>
+     </li>
+
+<!--    
+     <br>
+     <div class="line"></div>
+     <br>
+
+
+     <li>
+      <a href="notification.html">
+        <i class='bx bx-bell'></i>
+        <span class="links_name">Notifications</span>
+      </a>
+      <span class="tooltip">Notifications</span>
+    </li>
+
+    <li>
+      <a   href="SeamAi.html">
+          <i class='bx bx-grid-alt'></i>
+        <span class="links_name">SeamAi | <strong>Coming Soon</strong></span>
+      </a>
+      <span class="tooltip">SeamAi</span>
+    </li>
+<br>
+    <div class="line"></div>
+    <br>
+     <li>
+        <a href="Learn.html">
+          <i class='bx bx-book'></i>
+          <span class="links_name">Help Guide</span>
+        </a>
+        <span class="tooltip">Help</span>
+      </li>
+
+      <li>
+        <a   href="support.html">
+            <i class='ri-customer-service-2-line'></i>
+          <span class="links_name">Our Support</span>
+        </a>
+        <span class="tooltip">Support</span>
+      </li> -->
+
+  
+     <br>
+     <br>
+     <li class="profile">
+         <div class="profile-details">
+           <div class="name_job">
+             <div class="name">Company Name</div>
+             <div class="job">by <strong>Globalseam</strong></div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out"></i>
+
+     </li>
+    </ul>
+  </div>
+
+
+
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+  
+    // Check localStorage for sidebar state on page load
+    document.addEventListener("DOMContentLoaded", () => {
+      const isSidebarOpen = localStorage.getItem("sidebar-open");
+  
+      if (isSidebarOpen === "true") {
+        sidebar.classList.add("open");
+      } else {
+        sidebar.classList.remove("open");
+      }
+      menuBtnChange(); // Update the button icon based on sidebar state
+    });
+  
+    // Toggle sidebar open/close and save the state to localStorage
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      updateSidebarState(); // Save the state when sidebar is toggled
+    });
+  
+    searchBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      updateSidebarState(); // Save the state when sidebar is toggled
+    });
+  
+    // Function to update sidebar state in localStorage
+    function updateSidebarState() {
+      const isOpen = sidebar.classList.contains("open");
+      localStorage.setItem("sidebar-open", isOpen); // Save the state (true or false)
+      menuBtnChange(); // Update the button icon
+    }
+  
+    // Function to change sidebar button icon (optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); // Replacing the icon class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); // Replacing the icon class
+      }
+    }
+  </script>
+  
 
 
 
   <!-- Main Screen -->
 
-  <section class="home-section">
-    <header>
-        <div class="text">
-           FinAsset  <i class="bx bx-chevron-right"></i> Customer Accounts <i class="bx bx-chevron-right"></i> <span style="color: orange; background: #ccd1dd; padding: 8px 20px; border-radius: 20px; cursor: pointer;"><i class="bx bx-home"></i>Home</span>
-        </div>
+   <section class="home-section">
+      
 
-        <div class="header-content">
-            <!-- <h1>Your Website Title</h1> -->
-         
-        </div>
-
-        <div class="header-content">
-            <!-- <h1>Your Website Title</h1> -->
-            <div class="search-container">
-                <i class="bx bx-search"></i>
-                <input type="text" placeholder="Search...">
-                <button type="submit">GO</button>
-            </div>
-           
-        </div>
-    </header>
+      
+      <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu">
+          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
+            <ul class="links">
+              <li><a style="background: orange;" href="#">Home</a></li>
+              <li><a href="#">SetUp</a></li>
+        
+              <!-- <li>
+                <a href="#" class="desktop-link">Services</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">Services</label>
+                <ul>
+                  <li><a href="#">Drop Menu 1</a></li>
+                  <li><a href="#">Drop Menu 2</a></li>
+                  <li><a href="#">Drop Menu 3</a></li>
+                  <li>
+                    <a href="#" class="desktop-link">More Items</a>
+                    <input type="checkbox" id="show-items">
+                    <label for="show-items">More Items</label>
+                    <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a></li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> -->
+              <li><a href="#">Operations</a></li>
+              <li><a href="#">Reports</a></li>
+            </ul>
+          </div>
+          <div class="hqi">
+            <a href="notification.html"><i class="bx bx-bell"></i></a>
+            <a href="support.html"><i  class="ri-customer-service-2-line"></i></a> 
+            <a href="SeamAi.html"><i  class="bx bx-brain"></i></a> 
+          </div>
+          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+          <form action="#" class="search-box">
+            <input type="text" placeholder="Type Something to Search..." required>
+            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+          </form>
+        </nav>
+      </div>
 
     <style>
       .popup-overlay {
@@ -356,7 +360,7 @@
           display: none;
           justify-content: center;
           align-items: center;
-          z-index: 999;
+          z-index: 999999;
           overflow-y: scroll;
           scrollbar-width: none; /* For Firefox */
       }
@@ -759,246 +763,6 @@ function fillFormWithCustomerData(customer) {
 
 
 
-
-
-  <script>
-    let sidebar = document.querySelector(".sidebar");
-    let closeBtn = document.querySelector("#btn");
-    let searchBtn = document.querySelector(".bx-search");
-    let submenus = document.querySelectorAll('.submenu');  // Select all submenus
-    
-    // To keep track of submenus that were open before the sidebar was closed
-    let previouslyOpenSubmenus = [];
-    
-    // Dropdown elements for Asset Management
-    let assetManagementBtn = document.getElementById('assetManagementBtn');
-    let assetManagementSubmenu = document.getElementById('assetManagementSubmenu');
-    let chevron = document.getElementById('chevron');
-    
-    // Dropdown elements for Non Utilized Funds (nested dropdown)
-    let nonUtilizedFundsBtn = document.getElementById('nonUtilizedFundsBtn');
-    let nonUtilizedFundsSubmenu = document.getElementById('nonUtilizedFundsSubmenu');
-    let nonUtilizedChevron = document.getElementById('nonUtilizedChevron');
-    
-    // Dropdown elements for Deposits (nested dropdown inside Non Utilized Funds)
-    let depositsBtn = document.getElementById('depositsBtn');
-    let depositsSubmenu = document.getElementById('depositsSubmenu');
-    let depositsChevron = document.getElementById('depositsChevron');
-    
-    // Dropdown elements for Deposits (nested dropdown inside Non Utilized Funds)
-    let deposits2Btn = document.getElementById('deposits2Btn');
-    let deposits2Submenu = document.getElementById('deposits2Submenu');
-    let deposits2Chevron = document.getElementById('deposits2Chevron');
-    
-    // Dropdown elements for Customer Management
-    let customerManagementBtn = document.getElementById('customerManagementBtn');
-    let customerManagementSubmenu = document.getElementById('customerManagementSubmenu');
-    let customerChevron = document.getElementById('customerChevron');
-    
-    // Dropdown elements for Customer Account
-    let customerAccountBtn = document.getElementById('customerAccountBtn');
-    let customerAccountSubmenu = document.getElementById('customerAccountSubmenu');
-    let customerAccountChevron = document.getElementById('customerAccountChevron');
-    
-    // Dropdown elements for Account Management
-    let accountManagementBtn = document.getElementById('accountManagementBtn');
-    let accountManagementSubmenu = document.getElementById('accountManagementSubmenu');
-    let accountManagementChevron = document.getElementById('accountManagementChevron');
-    
-    // Function to toggle submenu with animation
-    function toggleSubmenu(submenu, chevronIcon) {
-        submenu.classList.toggle('open');
-        
-        if (submenu.classList.contains('open')) {
-            submenu.style.maxHeight = submenu.scrollHeight + "px";  // Set height to auto-expand
-            chevronIcon.classList.add('rotate');
-        } else {
-            submenu.style.maxHeight = 0;  // Collapse the submenu
-            chevronIcon.classList.remove('rotate');
-        }
-    }
-    
-    // Account Management submenu toggle functionality
-    accountManagementBtn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(accountManagementSubmenu, accountManagementChevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Customer Account submenu toggle functionality
-    customerAccountBtn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(customerAccountSubmenu, customerAccountChevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Asset Management submenu toggle functionality
-    assetManagementBtn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(assetManagementSubmenu, chevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Non Utilized Funds submenu toggle functionality (nested submenu)
-    nonUtilizedFundsBtn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(nonUtilizedFundsSubmenu, nonUtilizedChevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Deposits submenu toggle functionality (nested submenu)
-    depositsBtn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(depositsSubmenu, depositsChevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Deposits2 submenu toggle functionality (nested submenu)
-    deposits2Btn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(deposits2Submenu, deposits2Chevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Customer Management submenu toggle functionality
-    customerManagementBtn.addEventListener('click', () => {
-      if (sidebar.classList.contains("open")) {
-        toggleSubmenu(customerManagementSubmenu, customerChevron);  // Toggle submenu with animation
-      }
-    });
-    
-    // Function to toggle sidebar open/close and store the state
-    closeBtn.addEventListener("click", () => {
-      if (sidebar.classList.contains("open")) {
-        // Save the state of open submenus before closing
-        storeOpenSubmenus();
-        closeAllSubmenus();  // Close submenus before closing the sidebar
-        setTimeout(() => {
-          sidebar.classList.remove("open");
-          menuBtnChange();
-          toggleChevronDisplay();
-          localStorage.setItem('sidebarState', 'closed');
-        }, 300);  // Adjust this delay as needed
-      } else {
-        sidebar.classList.add("open");
-        menuBtnChange();
-        toggleChevronDisplay();
-        reopenPreviouslyOpenSubmenus();  // Restore open submenus
-        localStorage.setItem('sidebarState', 'open');
-      }
-    });
-    
-    // Search button click also toggles sidebar open/close
-    searchBtn.addEventListener("click", () => {
-      if (sidebar.classList.contains("open")) {
-        storeOpenSubmenus();  // Save the state of open submenus
-        closeAllSubmenus();
-        setTimeout(() => {
-          sidebar.classList.remove("open");
-          menuBtnChange();
-          toggleChevronDisplay();
-          localStorage.setItem('sidebarState', 'closed');
-        }, 300);
-      } else {
-        sidebar.classList.add("open");
-        menuBtnChange();
-        toggleChevronDisplay();
-        reopenPreviouslyOpenSubmenus();
-        localStorage.setItem('sidebarState', 'open');
-      }
-    });
-    
-    // Store the open submenus before closing the sidebar
-    function storeOpenSubmenus() {
-      previouslyOpenSubmenus = [];
-      submenus.forEach(submenu => {
-        if (submenu.classList.contains('open')) {
-          previouslyOpenSubmenus.push(submenu);
-        }
-      });
-    }
-    
-    // Reopen submenus that were open before the sidebar closed
-    function reopenPreviouslyOpenSubmenus() {
-      previouslyOpenSubmenus.forEach(submenu => {
-        submenu.classList.add('open');
-        submenu.style.maxHeight = submenu.scrollHeight + "px";  // Restore maxHeight
-        let chevronIcon = submenu.previousElementSibling.querySelector('.bx-chevron-down');
-        if (chevronIcon) {
-          chevronIcon.classList.add('rotate');
-        }
-      });
-    }
-    
-    // Close all submenus function
-    function closeAllSubmenus() {
-      submenus.forEach(submenu => {
-        submenu.classList.remove('open');
-        submenu.style.maxHeight = 0;  // Collapse submenu
-        let chevronIcon = submenu.previousElementSibling.querySelector('.bx-chevron-down');
-        if (chevronIcon) {
-          chevronIcon.classList.remove('rotate');
-        }
-      });
-    }
-    
-    // Check the stored sidebar state on page load
-    document.addEventListener("DOMContentLoaded", () => {
-      const sidebarState = localStorage.getItem('sidebarState');
-      if (sidebarState === 'open') {
-        sidebar.classList.add('open');
-        menuBtnChange();
-        toggleChevronDisplay();
-      } else if (sidebarState === 'closed') {
-        sidebar.classList.remove('open');
-        menuBtnChange();
-        toggleChevronDisplay();
-      }
-    });
-    
-    // Functionality for buttons with the 'dropdown-toggle' class to open side menu if it's closed
-    document.querySelectorAll('.dropdown-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (!sidebar.classList.contains('open')) {
-          sidebar.classList.add('open');
-          menuBtnChange();
-          toggleChevronDisplay();
-          const submenu = btn.nextElementSibling;
-          const chevronIcon = btn.querySelector('.bx-chevron-down');
-          if (submenu && chevronIcon) {
-            submenu.style.maxHeight = submenu.scrollHeight + "px";  // Open submenu
-            chevronIcon.classList.add('rotate');
-          }
-        }
-      });
-    });
-    
-    // Function to toggle chevron display when sidebar is opened/closed
-    function toggleChevronDisplay() {
-      let chevrons = document.querySelectorAll('.bx-chevron-down');
-      if (sidebar.classList.contains("open")) {
-        chevrons.forEach(chevron => {
-          chevron.style.display = "block";
-        });
-      } else {
-        chevrons.forEach(chevron => {
-          chevron.style.display = "none";
-        });
-      }
-    }
-    
-    // Optional: Change menu button icon when clicked
-    function menuBtnChange() {
-      if (sidebar.classList.contains("open")) {
-        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-      } else {
-        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-      }
-    }
-    
-    
-    </script>
-    
     
     
     

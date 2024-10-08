@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> FinAsset  | Notifications </title>
+    <title> FinAsset  | SeamAi </title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="home2.css">
     <link
@@ -153,7 +153,6 @@
 </li>
 
  
-
     <!-- Assets Management -->
     <li>
       <a href="assetm-home.html">
@@ -304,42 +303,7 @@
           <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
           <div class="content">
           <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
-            <ul class="links">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li>
-                <a href="#" class="desktop-link">Features</a>
-                <input type="checkbox" id="show-features">
-                <label for="show-features">Features</label>
-                <ul>
-                  <li><a href="#">Drop Menu 1</a></li>
-                  <li><a href="#">Drop Menu 2</a></li>
-                  <li><a href="#">Drop Menu 3</a></li>
-                  <li><a href="#">Drop Menu 4</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#" class="desktop-link">Services</a>
-                <input type="checkbox" id="show-services">
-                <label for="show-services">Services</label>
-                <ul>
-                  <li><a href="#">Drop Menu 1</a></li>
-                  <li><a href="#">Drop Menu 2</a></li>
-                  <li><a href="#">Drop Menu 3</a></li>
-                  <li>
-                    <a href="#" class="desktop-link">More Items</a>
-                    <input type="checkbox" id="show-items">
-                    <label for="show-items">More Items</label>
-                    <ul>
-                      <li><a href="#">Sub Menu 1</a></li>
-                      <li><a href="#">Sub Menu 2</a></li>
-                      <li><a href="#">Sub Menu 3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#">Feedback</a></li>
-            </ul>
+          
           </div>
           <div class="hqi">
             <a href="notification.html"><i class="bx bx-bell"></i></a>
@@ -355,30 +319,21 @@
  
 
     <style>
-    .notification-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-    align-items: center;
-    height: 300px; /* Set a fixed height for the div */
-    border: 2px solid #d3d9e6; /* Optional: border for visibility */
-    border-radius: 10px; /* Optional: rounded corners */
-    background-color: #d3d9e6; /* Optional: background color */
-}
-
-.notification-container p {
-    font-size: 18px;
-    color: #484848;
-    text-align: center;
-    margin: 20px;
-}
-
+        .gradient-text {
+            background: linear-gradient(38deg, rgb(255, 191, 0), rgb(255, 0, 0));
+            -webkit-background-clip: text; /* For Safari */
+            -webkit-text-fill-color: transparent; /* For Safari */
+            background-clip: text;
+            color: transparent;
+        }
     </style>
 
     <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
         <div style="text-align: left;">
-               <h1 style="font-size: 55px; color: #181818; line-height: 1.2;"">Notifications </h1>
-        
+               <h1 style="font-size: 55px; color: #181818; line-height: 1.2;""> Welcome To <strong class="gradient-text">SeamAi</strong> <strong style="font-weight: 400;">(Beta)</strong> </h1>
+            <p style="color: rgb(65, 65, 65); max-width: 700px;">SeamAi empowers users with intelligent insights and automated tools for smarter asset management. Experience seamless tracking and personalized recommendations tailored just for you.</p>
+            <br>
+            <!-- <a style="text-decoration: none; background: rgb(20, 20, 20); color: orange; padding: 10px 35px; border-radius: 10px;" href="">Subscribe</a> -->
         </div>
         <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
     </div>
@@ -387,12 +342,53 @@
    
     <br>
     
-    <div class="notification-container">
-        <p>You currently don't have any notifications</p>
-    </div>
-    
-  
+
+    <section class="why-finasset3" id="why-finasset">
+        <div class="section__container3">
+          <!-- <h2 class="section__header2">
+           <i class="ri-time-line"></i>  Timelines
+          </h2> -->
+          <div class="reasons__grid3">
+            <div class="reason__card3" onclick="window.location.href='SeamAi-load2.html';">
+                <i class='bx bx-chat'></i>
+                <div class="text-container">
+                    <h4>Open Chat Log</h4>
+                    <p>Click to start a conversation with SeamAi</p>
+                </div>
+            </div>
+            <div class="reason__card3">
+                <i class='bx bx-bar-chart'></i>
+                <div class="text-container">
+                    <h4>Generate Stats</h4>
+                    <p>Click to Convert complex data with SeamAi</p>
+                </div>
+            </div>
+            <div class="reason__card3">
+              <i class='bx bx-note'></i>
+              <div class="text-container">
+                  <h4>Generate Inventory</h4>
+                  <p> Click to Create Hassle free Inventories with SeamAi</p>
+              </div>
+          </div>
+
+          <div class="reason__card3">
+            <i class='bx bx-calculator'></i>
+            <!-- <p style="position: absolute; right: 0; top: 0; padding: 10px; background: orange; color: white; border-top-right-radius: 20px;">NEW</p> -->
+              
+            <div class="text-container">
+               <h4>Fin Calculator</h4>
+                <p>Click to Calculate budgets and assets with SeamAi</p>
+            </div>
+        </div>
+        </div>
+        
+            <!-- <div class="reason__card3">
+                <h4></h4>
+                <p>Last Time <strong>Logged-in</strong></p>
+            </div> -->
             
+          </div>
+        </div>
       </section>
 
 
@@ -435,6 +431,8 @@
 
 
 
+    
+    
     
     
     <!-- Time & Date -->

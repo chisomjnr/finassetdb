@@ -15,6 +15,17 @@ body{
     color: orange;
 }
 
+.line {
+  border-bottom: 1px solid #2b284b;
+}
+
+.line2 {
+  border-bottom: 2px solid #bab9cb;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
 .sidebar {
     position: fixed;
     left: 0;
@@ -26,15 +37,6 @@ body{
     z-index: 99;
     transition: all 0.5s ease;
     
-    /* Enable scrolling */
-    overflow-y:scroll;
-    
-    /* Hide scrollbar */
-    scrollbar-width: none; /* For Firefox */
-  }
-  
-  .sidebar::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
   }
   
 .sidebar.open{
