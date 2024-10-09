@@ -355,7 +355,7 @@ header {
     position: absolute;
     right: 0;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     margin-right: 20px;
     align-items: center; /* Center vertically */
