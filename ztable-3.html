@@ -136,7 +136,7 @@
       
 
      <li>
-      <a id="active" href="customer-management-home.html">
+      <a href="customer-management-home.html">
         <i class='bx bx-user'></i>
         <span class="links_name">Customer Management</span>
       </a>
@@ -146,7 +146,7 @@
    <!-- Customer Account Menu -->
 
 <li>
-  <a  href="customer-account-home.html">
+  <a id="active" href="customer-account-home.html">
     <i class='bx bxs-user-account'></i>
     <span class="links_name">Customer Account</span>
   </a>
@@ -173,7 +173,7 @@
 
     <!-- Account Management with Submenu -->
    <li>
-    <a href="account-management.html">
+      <a href="assetm-home.html">
         <i class='bx bxs-group'></i>
   <span class="links_name">Account Management</span>
       </a>
@@ -294,60 +294,65 @@
   
 
 
-
   <!-- Main Screen -->
 
-   <section class="home-section">
-      
+  <section class="home-section">
+  
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+        <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
+          <ul class="links">
+            <li><a id="goBackLink" href="#">< Back to Previous Page</a></li>
 
-      
-      <div class="wrapper">
-        <nav>
-          <input type="checkbox" id="show-search">
-          <input type="checkbox" id="show-menu">
-          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-          <div class="content">
-          <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
-            <ul class="links">
-              <li><a style="background: orange;" href="#">Home</a></li>
-              <li><a href="#">SetUp</a></li>
-        
-              <!-- <li>
-                <a href="#" class="desktop-link">Services</a>
-                <input type="checkbox" id="show-services">
-                <label for="show-services">Services</label>
-                <ul>
-                  <li><a href="#">Drop Menu 1</a></li>
-                  <li><a href="#">Drop Menu 2</a></li>
-                  <li><a href="#">Drop Menu 3</a></li>
-                  <li>
-                    <a href="#" class="desktop-link">More Items</a>
-                    <input type="checkbox" id="show-items">
-                    <label for="show-items">More Items</label>
-                    <ul>
-                      <li><a href="#">Sub Menu 1</a></li>
-                      <li><a href="#">Sub Menu 2</a></li>
-                      <li><a href="#">Sub Menu 3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> -->
-              <li><a href="#">Operations</a></li>
-              <li><a href="#">Reports</a></li>
-            </ul>
-          </div>
-          <div class="hqi">
-                        <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
-           Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a> 
-            <a href="SeamAi.html"><i  class="bx bx-brain"></i></a>  --> 
-          </div>
-          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-          <form action="#" class="search-box">
-            <input type="text" placeholder="Type Something to Search..." required>
-            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-          </form>
-        </nav>
-      </div>
+            
+            <script>
+              document.getElementById("goBackLink").addEventListener("click", function(event) {
+                  event.preventDefault(); // Prevent the default behavior of the link
+              
+                  history.back(); // Go back to the previous page
+              });
+              </script>
+
+
+            <!-- <li>
+              <a href="#" class="desktop-link">Services</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li>
+                  <a href="#" class="desktop-link">More Items</a>
+                  <input type="checkbox" id="show-items">
+                  <label for="show-items">More Items</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li> -->
+    
+          </ul>
+        </div>
+        <div class="hqi">
+          <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
+         Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a>  -->
+        </div>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Type Something to Search..." required>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+      </nav>
+    </div>
+
 
     <style>
       .popup-overlay {
@@ -430,7 +435,7 @@
   
   <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
       <div style="text-align: left;">
-             <h1 style="font-size: 35px; color: #181818; line-height: 1.2;" line-height: 1.2;">Customer Management</h1>
+             <h1 style="font-size: 35px; color: #181818; line-height: 1.2;" line-height: 1.2;">Results</h1>
       </div>
   </div>
   
@@ -439,78 +444,186 @@
   <!-- Main Content Area -->
   <main>
       <div class="content-header">
-          <h2>Dashboard</h2>
+          <h2>Investment Deal Slip</h2>
           <button class="add-btn" id="openPopupBtn"><i class="bx bx-upload"></i> Add New</button>
       </div>
-  
-      <!-- Customer Accounts Table -->
-      <div class="table-wrapper">
-          <table class="accounts-table" id="accountsTable">
-              <thead>
-                  <tr>
-                      <th><input type="checkbox"></th>
-                      <th>Customer ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Password</th>
-                      <th>Time Joined</th>
-                      <th>Date Joined</th>
-                      <th>Account Status</th>
-                      <th>Actions</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td><input type="checkbox"></td>
-                      <td>CUST001</td>
-                      <td>John Doe</td>
-                      <td>john.doe@example.com</td>
-                      <td>*******</td>
-                      <td>10:30 AM</td>
-                      <td>2024-10-05</td>
-                      <td class="status active">Active</td>
-                      <td>
-                          <button class="view-btn">View</button>
-                          <button class="edit-btn">Edit</button>
-                          <button class="delete-btn">Delete</button>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-  </main>
-  
-  <!-- Popup Form for Add New -->
-  <div class="popup-overlay" id="popupOverlay">
-      <div class="popup-form">
-          <section class="body">
-              <section class="container">
-                  <header>
-                      <h1 style="font-size: 25px;">FinAsset<strong style="color: orange;">.</strong></h1>
-                  </header>
-                <header id="popupHeader">Create Customer</header> <!-- Header changes dynamically -->
-       <form action="#" class="form" id="customerForm">
-                      <div class="input-box address">
-                          <label style="color: orange;">Details</label>
-                          <div class="column">
-                              <input type="text" id="firstName" placeholder="First Name" required />
-                              <input type="text" id="lastName" placeholder="Last Name" required />
-                          </div>
-                          <div class="column">
-                              <input type="email" id="email" placeholder="Email" required />
-                          </div>
-                          <div class="column">
-                              <input type="text" id="customerID" placeholder="Customer ID" readonly />
-                          </div>
 
-                          <div class="column">
-                            <input type="password" id="password" placeholder="Password" required />
-                        </div>
-                      </div>
-                  
-                      <button type="submit" id="commitChangesBtn">Commit Changes</button>
-                  </form>
-              </section>
+
+
+
+      <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid rgb(211, 211, 211);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+td{
+    background: rgb(255, 255, 255);
+}
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            padding: 15px 0;
+            color: #ddd;
+            background-color: #11101D;;
+        }
+    </style>
+</head>
+<body>
+<br>
+
+    <table>
+        <tr>
+            <th colspan="1" class="section-title">TITLES</td>
+            <td colspan="2" class="section-title">CLIENT DETAILS</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>16/4/2014</td>
+        </tr>
+        <tr>
+            <th>Name of Client</th>
+            <td>UBA CAPITAL PLC</td>
+        </tr>
+        <tr>
+            <th>Account No</th>
+            <td>UBAT/LSRB</td>
+        </tr>
+        <tr>
+            <th>Product</th>
+            <td>SINKING FUND</td>
+        </tr>
+        <tr>
+            <th>Business Unit</th>
+            <td>Asset Mgt</td>
+        </tr>
+        <tr>
+            <th>Asset/Liability</th>
+            <td>Liability</td>
+        </tr>
+
+        <tr>
+            <th colspan="1" class="section-title">TITLES</td>
+            <td colspan="2" class="section-title">INVESTMENT DETAILS</td>
+        </tr>
+        <tr>
+            <th>Effective Date</th>
+            <td>15/04/2014</td>
+        </tr>
+        <tr>
+            <th>Principal Amount</th>
+            <td>777,250,000.25</td>
+        </tr>
+        <tr>
+            <th>Interest Rate</th>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <th>Tenor</th>
+            <td>37</td>
+        </tr>
+        <tr>
+            <th>Counter Party</th>
+            <td>UBA PLC</td>
+        </tr>
+        <tr>
+            <th>Interest Due</th>
+            <td>Capitalized</td>
+        </tr>
+        <tr>
+            <th>Maturity Date</th>
+            <td>15/04/2013</td>
+        </tr>
+
+        <tr>
+            <th colspan="1" class="section-title">TITLES</td>
+            <td colspan="2" class="section-title">AUTHORIZATION/EXECUTION</td>
+        </tr>
+        <tr>
+            <th>Processed By</th>
+            <td>GSS OPERATIONS</td>
+        </tr>
+        <tr>
+            <th>Approved By</th>
+            <td>SEGUN AREMU, TOKUNBO AJAYI</td>
+        </tr>
+    </table>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </section>
       </div>
   </div>

@@ -172,7 +172,7 @@
   
       <!-- Account Management with Submenu -->
      <li>
-        <a href="assetm-home.html">
+        <a href="account-management.html">
           <i class='bx bxs-group'></i>
     <span class="links_name">Account Management</span>
         </a>
@@ -651,7 +651,18 @@
                     </ul>
                   </li>
 
-                  <li><a href="asset-result.html.html">Result</a></li>
+                  <li>
+              <a   href="#" class="desktop-link">Report <i class="bx bx-chevron-down"></i></a>
+              <input type="checkbox" id="show-features">
+              <label for="show-features">Report</label>
+              <ul>
+                <li><a href="ztable-1.html">Investment Liquidation</a></li>
+                <li><a  href="ztable-2.html">Coupon Payment Calendar</a></li>
+                <li><a href="ztable-3.html">Investment Deal Slip</a></li>
+                <li><a href="ztable-4.html">Cash Statement of Account</a></li>
+                <li><a href="asset-result.html.html">Others</a></li>
+              </ul>
+            </li>
                 
                 </ul>
               </div>
@@ -748,6 +759,8 @@
         }
     </style>
 
+    <section class="side-by-side">
+
 <section class=".body2">
 
 <div class="chart-wrapper">
@@ -807,6 +820,73 @@ const doughnutChart = new Chart(ctx, config);
   
             
       </section>
+
+
+      <section class="body2">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js CDN -->
+<style>
+    .body2 {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: poppins, sans-serif;
+    }
+
+    .chart-wrapper {
+        text-align: center;
+        background: white;
+        margin: 40px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(28, 28, 28, 0.16);
+    }
+
+    .chart-container {
+        width: 700px;
+        height: 700px;
+        margin: 0 auto;
+    }
+
+    .chart-wrapper h4 {
+        font-size: 24px;
+        margin: 20px;
+        color: #1d1b31;
+    }
+
+    .chart-container .chartjs-legend {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+    }
+</style>
+
+<!-- <section class=".body2">
+    <div class="chart-wrapper">
+        <h4>Bar Data of Current Assets</h4> 
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+    </div>
+
+ 
+
+<script>
+  
+</script>
+
+
+</section> -->
+
+ 
+
+
+      </section>
+
+      </section>
 <br>
 <br>
 <br>
@@ -814,7 +894,7 @@ const doughnutChart = new Chart(ctx, config);
 
 
 
-      <a href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>
+     Report <a style="z-index: 999999999;" href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>
         Support</a>
 
 

@@ -136,7 +136,7 @@
       
 
      <li>
-      <a id="active" href="customer-management-home.html">
+      <a href="customer-management-home.html">
         <i class='bx bx-user'></i>
         <span class="links_name">Customer Management</span>
       </a>
@@ -146,7 +146,7 @@
    <!-- Customer Account Menu -->
 
 <li>
-  <a  href="customer-account-home.html">
+  <a id="active" href="customer-account-home.html">
     <i class='bx bxs-user-account'></i>
     <span class="links_name">Customer Account</span>
   </a>
@@ -173,7 +173,7 @@
 
     <!-- Account Management with Submenu -->
    <li>
-    <a href="account-management.html">
+      <a href="assetm-home.html">
         <i class='bx bxs-group'></i>
   <span class="links_name">Account Management</span>
       </a>
@@ -297,57 +297,63 @@
 
   <!-- Main Screen -->
 
-   <section class="home-section">
-      
+  <section class="home-section">
+  
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+        <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
+          <ul class="links">
+            <li><a id="goBackLink" href="#">< Back to Previous Page</a></li>
 
-      
-      <div class="wrapper">
-        <nav>
-          <input type="checkbox" id="show-search">
-          <input type="checkbox" id="show-menu">
-          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-          <div class="content">
-          <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
-            <ul class="links">
-              <li><a style="background: orange;" href="#">Home</a></li>
-              <li><a href="#">SetUp</a></li>
-        
-              <!-- <li>
-                <a href="#" class="desktop-link">Services</a>
-                <input type="checkbox" id="show-services">
-                <label for="show-services">Services</label>
-                <ul>
-                  <li><a href="#">Drop Menu 1</a></li>
-                  <li><a href="#">Drop Menu 2</a></li>
-                  <li><a href="#">Drop Menu 3</a></li>
-                  <li>
-                    <a href="#" class="desktop-link">More Items</a>
-                    <input type="checkbox" id="show-items">
-                    <label for="show-items">More Items</label>
-                    <ul>
-                      <li><a href="#">Sub Menu 1</a></li>
-                      <li><a href="#">Sub Menu 2</a></li>
-                      <li><a href="#">Sub Menu 3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> -->
-              <li><a href="#">Operations</a></li>
-              <li><a href="#">Reports</a></li>
-            </ul>
-          </div>
-          <div class="hqi">
-                        <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
-           Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a> 
-            <a href="SeamAi.html"><i  class="bx bx-brain"></i></a>  --> 
-          </div>
-          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-          <form action="#" class="search-box">
-            <input type="text" placeholder="Type Something to Search..." required>
-            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-          </form>
-        </nav>
-      </div>
+            
+  <script>
+    document.getElementById("goBackLink").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+    
+        history.back(); // Go back to the previous page
+    });
+    </script>
+
+           
+            <!-- <li>
+              <a href="#" class="desktop-link">Services</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li>
+                  <a href="#" class="desktop-link">More Items</a>
+                  <input type="checkbox" id="show-items">
+                  <label for="show-items">More Items</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li> -->
+    
+          </ul>
+        </div>
+        <div class="hqi">
+          <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
+         Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a>  -->
+        </div>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Type Something to Search..." required>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+      </nav>
+    </div>
+
 
     <style>
       .popup-overlay {
@@ -430,7 +436,7 @@
   
   <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
       <div style="text-align: left;">
-             <h1 style="font-size: 35px; color: #181818; line-height: 1.2;" line-height: 1.2;">Customer Management</h1>
+             <h1 style="font-size: 35px; color: #181818; line-height: 1.2;" line-height: 1.2;">Results</h1>
       </div>
   </div>
   
@@ -439,78 +445,226 @@
   <!-- Main Content Area -->
   <main>
       <div class="content-header">
-          <h2>Dashboard</h2>
+          <h2>Coupon Payment Calendar</h2>
           <button class="add-btn" id="openPopupBtn"><i class="bx bx-upload"></i> Add New</button>
       </div>
-  
-      <!-- Customer Accounts Table -->
-      <div class="table-wrapper">
-          <table class="accounts-table" id="accountsTable">
-              <thead>
-                  <tr>
-                      <th><input type="checkbox"></th>
-                      <th>Customer ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Password</th>
-                      <th>Time Joined</th>
-                      <th>Date Joined</th>
-                      <th>Account Status</th>
-                      <th>Actions</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td><input type="checkbox"></td>
-                      <td>CUST001</td>
-                      <td>John Doe</td>
-                      <td>john.doe@example.com</td>
-                      <td>*******</td>
-                      <td>10:30 AM</td>
-                      <td>2024-10-05</td>
-                      <td class="status active">Active</td>
-                      <td>
-                          <button class="view-btn">View</button>
-                          <button class="edit-btn">Edit</button>
-                          <button class="delete-btn">Delete</button>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-  </main>
-  
-  <!-- Popup Form for Add New -->
-  <div class="popup-overlay" id="popupOverlay">
-      <div class="popup-form">
-          <section class="body">
-              <section class="container">
-                  <header>
-                      <h1 style="font-size: 25px;">FinAsset<strong style="color: orange;">.</strong></h1>
-                  </header>
-                <header id="popupHeader">Create Customer</header> <!-- Header changes dynamically -->
-       <form action="#" class="form" id="customerForm">
-                      <div class="input-box address">
-                          <label style="color: orange;">Details</label>
-                          <div class="column">
-                              <input type="text" id="firstName" placeholder="First Name" required />
-                              <input type="text" id="lastName" placeholder="Last Name" required />
-                          </div>
-                          <div class="column">
-                              <input type="email" id="email" placeholder="Email" required />
-                          </div>
-                          <div class="column">
-                              <input type="text" id="customerID" placeholder="Customer ID" readonly />
-                          </div>
 
-                          <div class="column">
-                            <input type="password" id="password" placeholder="Password" required />
-                        </div>
-                      </div>
-                  
-                      <button type="submit" id="commitChangesBtn">Commit Changes</button>
-                  </form>
-              </section>
+
+
+
+
+
+      <style>
+        /* Existing table styles */
+        .coupon-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .coupon-table th, .coupon-table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .coupon-table th {
+            background-color: #1F2739;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .coupon-table td {
+            color: #333;
+        }
+
+        .coupon-table tr:nth-child(even) {
+            background-color: #f4f4f9;
+        }
+
+        /* Hover effect */
+        .coupon-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Table controls */
+        .table-controls {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="table-controls">
+    <label for="rows">Show 
+        <select id="rows">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+        </select> 
+    entries
+    </label>
+</div>
+
+<table class="coupon-table" id="coupon-table">
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Coupon Date</th>
+            <th>Date of Transfer to Registrars</th>
+            <th>Coupon Payment (NGN)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>LASG P1 S2</td>
+            <td>19th Apr</td>
+            <td>17th Apr</td>
+            <td>15,095,719,178.08</td>
+        </tr>
+        <tr>
+            <td>LASG P2 S1</td>
+            <td>22nd Nov & 22nd May</td>
+            <td>18th May & 20th Nov</td>
+            <td>3,381,876,265.90</td>
+        </tr>
+        <tr>
+            <td>LASG P2 S2</td>
+            <td>27th May & 27th Nov</td>
+            <td>25th May & 23rd Nov</td>
+            <td>1,864,512,378.63</td>
+        </tr>
+        <tr>
+            <td>LASG N47BN</td>
+            <td>30th June & 30th Dec</td>
+            <td>28th June & 27th Dec</td>
+            <td>648,020,547.95</td>
+        </tr>
+        <tr>
+            <td>BAYELSA</td>
+            <td>30th Dec & 30th June</td>
+            <td>27th Dec & 28th June</td>
+            <td>822,835,072.77</td>
+        </tr>
+        <tr>
+            <td>ENUGU</td>
+            <td>30th Sep & 30th Mar</td>
+            <td>27th Sep & 28th Mar</td>
+            <td>294,205,123.98</td>
+        </tr>
+        <tr>
+            <td>LA CASERA</td>
+            <td>18th Apr & 18th Oct</td>
+            <td>14th Apr & 16th Oct</td>
+            <td>244,241,095.89</td>
+        </tr>
+        <tr>
+            <td>EDO</td>
+            <td>30th Dec & 30th June</td>
+            <td>27th Dec & 28th June</td>
+            <td>13,375,000,000.00</td>
+        </tr>
+        <tr>
+            <td>DELTA</td>
+            <td>30th Sep & 30th Mar</td>
+            <td>27th Sep & 28th Mar</td>
+            <td>952,874,488.55</td>
+        </tr>
+        <tr>
+            <td>NIGER</td>
+            <td>26th Sep & 26th Mar</td>
+            <td>22nd Sep & 23rd Mar</td>
+            <td>265,630,944.89</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // Limit rows display and add functionality to change visible rows
+    document.getElementById('rows').addEventListener('change', function () {
+        const table = document.getElementById('coupon-table').getElementsByTagName('tbody')[0];
+        const rows = table.getElementsByTagName('tr');
+        const value = this.value;
+
+        for (let i = 0; i < rows.length; i++) {
+            rows[i].style.display = (i < value) ? '' : 'none';
+        }
+    });
+
+    // Initialize table to show only 10 rows
+    document.getElementById('rows').dispatchEvent(new Event('change'));
+</script>
+
+</body>
+</html>
+
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </section>
       </div>
   </div>

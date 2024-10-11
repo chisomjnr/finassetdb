@@ -136,7 +136,7 @@
       
 
      <li>
-      <a id="active" href="customer-management-home.html">
+      <a href="customer-management-home.html">
         <i class='bx bx-user'></i>
         <span class="links_name">Customer Management</span>
       </a>
@@ -146,7 +146,7 @@
    <!-- Customer Account Menu -->
 
 <li>
-  <a  href="customer-account-home.html">
+  <a id="active" href="customer-account-home.html">
     <i class='bx bxs-user-account'></i>
     <span class="links_name">Customer Account</span>
   </a>
@@ -173,7 +173,7 @@
 
     <!-- Account Management with Submenu -->
    <li>
-    <a href="account-management.html">
+      <a href="assetm-home.html">
         <i class='bx bxs-group'></i>
   <span class="links_name">Account Management</span>
       </a>
@@ -295,59 +295,64 @@
 
 
 
-  <!-- Main Screen -->
+   <!-- Main Screen -->
 
    <section class="home-section">
-      
+  
+    <div class="wrapper">
+      <nav>
+        <input type="checkbox" id="show-search">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <div class="content">
+        <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
+          <ul class="links">
+            <li><a id="goBackLink" href="#">< Back to Previous Page</a></li>
 
-      
-      <div class="wrapper">
-        <nav>
-          <input type="checkbox" id="show-search">
-          <input type="checkbox" id="show-menu">
-          <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-          <div class="content">
-          <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
-            <ul class="links">
-              <li><a style="background: orange;" href="#">Home</a></li>
-              <li><a href="#">SetUp</a></li>
-        
-              <!-- <li>
-                <a href="#" class="desktop-link">Services</a>
-                <input type="checkbox" id="show-services">
-                <label for="show-services">Services</label>
-                <ul>
-                  <li><a href="#">Drop Menu 1</a></li>
-                  <li><a href="#">Drop Menu 2</a></li>
-                  <li><a href="#">Drop Menu 3</a></li>
-                  <li>
-                    <a href="#" class="desktop-link">More Items</a>
-                    <input type="checkbox" id="show-items">
-                    <label for="show-items">More Items</label>
-                    <ul>
-                      <li><a href="#">Sub Menu 1</a></li>
-                      <li><a href="#">Sub Menu 2</a></li>
-                      <li><a href="#">Sub Menu 3</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> -->
-              <li><a href="#">Operations</a></li>
-              <li><a href="#">Reports</a></li>
-            </ul>
-          </div>
-          <div class="hqi">
-                        <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
-           Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a> 
-            <a href="SeamAi.html"><i  class="bx bx-brain"></i></a>  --> 
-          </div>
-          <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-          <form action="#" class="search-box">
-            <input type="text" placeholder="Type Something to Search..." required>
-            <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-          </form>
-        </nav>
-      </div>
+            
+            <script>
+              document.getElementById("goBackLink").addEventListener("click", function(event) {
+                  event.preventDefault(); // Prevent the default behavior of the link
+              
+                  history.back(); // Go back to the previous page
+              });
+              </script>
+
+            <!-- <li>
+              <a href="#" class="desktop-link">Services</a>
+              <input type="checkbox" id="show-services">
+              <label for="show-services">Services</label>
+              <ul>
+                <li><a href="#">Drop Menu 1</a></li>
+                <li><a href="#">Drop Menu 2</a></li>
+                <li><a href="#">Drop Menu 3</a></li>
+                <li>
+                  <a href="#" class="desktop-link">More Items</a>
+                  <input type="checkbox" id="show-items">
+                  <label for="show-items">More Items</label>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li> -->
+    
+          </ul>
+        </div>
+        <div class="hqi">
+          <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
+         Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a>  -->
+        </div>
+        <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+        <form action="#" class="search-box">
+          <input type="text" placeholder="Type Something to Search..." required>
+          <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </form>
+      </nav>
+    </div>
+
 
     <style>
       .popup-overlay {
@@ -425,12 +430,88 @@
       .table-wrapper::-webkit-scrollbar {
           background-color: #f1f1f1;
       }
+
+
+
+
+
+
+      /* General Table Styles */
+.accounts-table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.accounts-table2 th, .accounts-table2 td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.accounts-table2 th {
+    background-color: #1F2739;
+    color: #fff;
+    font-weight: bold;
+}
+
+.accounts-table2 td {
+    color: #333;
+}
+
+/* Adding hover effect for rows */
+.accounts-table2 tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+/* Adding hover effect for columns */
+.accounts-table2 td:hover {
+    background-color: #eaeaea;
+    transition: background-color 0.3s;
+}
+
+/* Adding hover effect for cells */
+.accounts-table2 td:hover,
+.accounts-table2 th:hover {
+    cursor: pointer;
+    background-color: #d1d1d1;
+    transition: background-color 0.3s;
+}
+
+/* Styling for status cells (Optional: if you have status data) */
+.accounts-table2 .status.active {
+    color: green;
+    font-weight: bold;
+}
+
+.accounts-table2 .status.inactive {
+    color: red;
+    font-weight: bold;
+}
+
+/* Zebra-striping for even rows */
+.accounts-table2 tr:nth-child(even) {
+    background-color: #f4f4f9;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .accounts-table2 {
+        font-size: 14px;
+    }
+}
+
   
   </style>
   
   <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
       <div style="text-align: left;">
-             <h1 style="font-size: 35px; color: #181818; line-height: 1.2;" line-height: 1.2;">Customer Management</h1>
+             <h1 style="font-size: 35px; color: #181818; line-height: 1.2;" line-height: 1.2;">Results</h1>
       </div>
   </div>
   
@@ -439,78 +520,356 @@
   <!-- Main Content Area -->
   <main>
       <div class="content-header">
-          <h2>Dashboard</h2>
+          <h2>Cash Statement Of Account</h2>
           <button class="add-btn" id="openPopupBtn"><i class="bx bx-upload"></i> Add New</button>
       </div>
-  
-      <!-- Customer Accounts Table -->
-      <div class="table-wrapper">
-          <table class="accounts-table" id="accountsTable">
-              <thead>
-                  <tr>
-                      <th><input type="checkbox"></th>
-                      <th>Customer ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Password</th>
-                      <th>Time Joined</th>
-                      <th>Date Joined</th>
-                      <th>Account Status</th>
-                      <th>Actions</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td><input type="checkbox"></td>
-                      <td>CUST001</td>
-                      <td>John Doe</td>
-                      <td>john.doe@example.com</td>
-                      <td>*******</td>
-                      <td>10:30 AM</td>
-                      <td>2024-10-05</td>
-                      <td class="status active">Active</td>
-                      <td>
-                          <button class="view-btn">View</button>
-                          <button class="edit-btn">Edit</button>
-                          <button class="delete-btn">Delete</button>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-  </main>
-  
-  <!-- Popup Form for Add New -->
-  <div class="popup-overlay" id="popupOverlay">
-      <div class="popup-form">
-          <section class="body">
-              <section class="container">
-                  <header>
-                      <h1 style="font-size: 25px;">FinAsset<strong style="color: orange;">.</strong></h1>
-                  </header>
-                <header id="popupHeader">Create Customer</header> <!-- Header changes dynamically -->
-       <form action="#" class="form" id="customerForm">
-                      <div class="input-box address">
-                          <label style="color: orange;">Details</label>
-                          <div class="column">
-                              <input type="text" id="firstName" placeholder="First Name" required />
-                              <input type="text" id="lastName" placeholder="Last Name" required />
-                          </div>
-                          <div class="column">
-                              <input type="email" id="email" placeholder="Email" required />
-                          </div>
-                          <div class="column">
-                              <input type="text" id="customerID" placeholder="Customer ID" readonly />
-                          </div>
 
-                          <div class="column">
-                            <input type="password" id="password" placeholder="Password" required />
-                        </div>
-                      </div>
-                  
-                      <button type="submit" id="commitChangesBtn">Commit Changes</button>
-                  </form>
-              </section>
+
+      <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          font-family: Arial, sans-serif;
+          box-shadow: 0 0 10px rgba(39, 39, 39, 0.314);
+        }
+        thead th {
+          background-color: #cf9b39;
+          color: white;
+          padding: 10px;
+          text-align: left;
+ 
+        }
+        tbody td {
+          padding: 10px;
+          border: 1px solid #ddd;
+        }
+        tbody tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        tbody tr:hover {
+          background-color: #ddd;
+        }
+        tbody td {
+          text-align: right;
+        }
+        tbody td:first-child, tbody td:nth-child(2), tbody td:nth-child(3) {
+          text-align: left;
+        }
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        tr:hover {
+          background-color: #ddd;
+        }
+      </style>
+
+      <table class="accounts-table2">
+        <thead>
+            <tr>
+                <th colspan="2">HEAD OFFICE</th>
+                <th colspan="4">CASH STATEMENT OF ACCOUNT</th>
+            </tr>
+            <tr>
+                <td>Account:</td>
+                <td>000019060001</td>
+                <td>Location:</td>
+                <td>001 HEAD OFFICE</td>
+            </tr>
+            <tr>
+                <td>Statement Period:</td>
+                <td>01/01/2009 to 17/02/2015</td>
+                <td>Currency:</td>
+                <td>NGN Nigerian Naira</td>
+            </tr>
+            <tr>
+                <td colspan="2">Address:</td>
+                <td colspan="2"></td>
+            </tr>
+        </thead>
+      </table>
+        <br>
+        <table>
+            <thead>
+              <tr>
+                <th>DATE</th>
+                <th>REFERENCE</th>
+                <th>DESCRIPTION</th>
+                <th>DEBIT</th>
+                <th>CREDIT</th>
+                <th>BALANCE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01/01/2009</td>
+                <td></td>
+                <td>Opening Balance</td>
+                <td></td>
+                <td></td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>12/11/2010</td>
+                <td>560019060004</td>
+                <td>INVESTMENT LIQUIDATION [560019060004: PRINCIPAL]</td>
+                <td></td>
+                <td>188,918,699.67</td>
+                <td>188,918,699.67</td>
+              </tr>
+              <tr>
+                <td>12/11/2010</td>
+                <td>560019060004</td>
+                <td>INVESTMENT LIQUIDATION [560019060004: INTEREST]</td>
+                <td></td>
+                <td>427,008.02</td>
+                <td>189,345,707.69</td>
+              </tr>
+              <tr>
+                <td>12/11/2010</td>
+                <td>JULY ISPO</td>
+                <td>DEPOSIT ROLLOVER [OLD: 560019060004; NEW: 560019060005]</td>
+                <td>189,345,707.69</td>
+                <td></td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>12/11/2010</td>
+                <td>560019060005</td>
+                <td>INVESTMENT LIQUIDATION [560019060005: PRINCIPAL]</td>
+                <td></td>
+                <td>188,918,699.67</td>
+                <td>188,918,699.67</td>
+              </tr>
+              <tr>
+                <td>12/11/2010</td>
+                <td>560019060005</td>
+                <td>INVESTMENT LIQUIDATION [560019060005: INTEREST]</td>
+                <td></td>
+                <td>427,008.02</td>
+                <td>189,345,707.69</td>
+              </tr>
+              <tr>
+                <td>12/11/2010</td>
+                <td>AUGUST ISPO</td>
+                <td>DEPOSIT ROLLOVER [OLD: 560019060005; NEW: 560019060006]</td>
+                <td>189,345,707.69</td>
+                <td></td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>22/11/2010</td>
+                <td></td>
+                <td>Investment at Maturity</td>
+                <td></td>
+                <td>190,405,878.33</td>
+                <td>190,405,878.33</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>560019060006</td>
+                <td>INVESTMENT LIQUIDATION [560019060006: PRINCIPAL]</td>
+                <td></td>
+                <td>188,918,699.07</td>
+                <td>379,324,577.40</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>560019060006</td>
+                <td>INVESTMENT LIQUIDATION [560019060006: INTEREST]</td>
+                <td></td>
+                <td>427,008.02</td>
+                <td>379,751,585.42</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>SEPTEMBER ISPO</td>
+                <td>DEPOSIT ROLLOVER [OLD: 560019060006; NEW: 570019060003]</td>
+                <td>189,345,707.09</td>
+                <td></td>
+                <td>190,405,878.33</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>570019060003</td>
+                <td>LIQ [570019060003: PRINCIPAL]</td>
+                <td>377,837,399.34</td>
+                <td></td>
+                <td>-187,431,521.01</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>570019060003</td>
+                <td>LIQ [570019060003: INTEREST]</td>
+                <td></td>
+                <td>931,653.86</td>
+                <td>-186,363,174.67</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>570019060002</td>
+                <td>LIQ [570019060002: PRINCIPAL]</td>
+                <td>189,881,408.66</td>
+                <td></td>
+                <td>-378,244,583.53</td>
+              </tr>
+              <tr>
+                <td>24/11/2010</td>
+                <td>570019060002</td>
+                <td>LIQ [570019060002: INTEREST]</td>
+                <td></td>
+                <td>546,234.19</td>
+                <td>-378,790,817.72</td>
+              </tr>
+              <tr>
+                <td>15/12/2010</td>
+                <td>UAML</td>
+                <td>INVT WITH UAML</td>
+                <td>377,837,399.34</td>
+                <td></td>
+                <td>-953,418.38</td>
+              </tr>
+              <tr>
+                <td>15/12/2010</td>
+                <td>560019060007</td>
+                <td>INVESTMENT LIQUIDATION [560019060007: PRINCIPAL]</td>
+                <td></td>
+                <td>189,345,707.69</td>
+                <td>188,392,289.31</td>
+              </tr>
+              <tr>
+                <td>15/12/2010</td>
+                <td>560019060007</td>
+                <td>INVESTMENT LIQUIDATION [560019060007: INTEREST]</td>
+                <td></td>
+                <td>427,973.17</td>
+                <td>188,820,262.48</td>
+              </tr>
+              <tr>
+                <td>15/12/2010</td>
+                <td>JULY ISPO</td>
+                <td>DEPOSIT ROLLOVER [OLD: 560019060007; NEW: 560019060009]</td>
+                <td>189,773,680.86</td>
+                <td></td>
+                <td>-953,418.38</td>
+              </tr>
+              <tr>
+                <td>23/12/2010</td>
+                <td>560019060009</td>
+                <td>INVESTMENT LIQUIDATION [560019060009: PRINCIPAL]</td>
+                <td></td>
+                <td>189,345,707.69</td>
+                <td>188,392,289.31</td>
+              </tr>
+              <tr>
+                <td>23/12/2010</td>
+                <td>560019060009</td>
+                <td>INVESTMENT LIQUIDATION [560019060009: INTEREST]</td>
+                <td></td>
+                <td>427,973.17</td>
+                <td>188,820,262.48</td>
+              </tr>
+              <tr>
+                <td>23/12/2010</td>
+                <td>AUGUST ISPO</td>
+                <td>DEPOSIT ROLLOVER [OLD: 560019060009; NEW: 560019060012]</td>
+                <td>189,773,680.26</td>
+                <td></td>
+                <td>-953,418.38</td>
+              </tr>
+              <tr>
+                <td>23/12/2010</td>
+                <td>560019060012</td>
+                <td>INVESTMENT LIQUIDATION [560019060012: PRINCIPAL]</td>
+                <td></td>
+                <td>188,918,699.67</td>
+                <td>187,965,281.29</td>
+              </tr>
+              <tr>
+                <td>23/12/2010</td>
+                <td>560019060012</td>
+                <td>INVESTMENT LIQUIDATION [560019060012: INTEREST]</td>
+                <td></td>
+                <td>504,645.84</td>
+                <td>188,469,927.13</td>
+              </tr>
+              <tr>
+                <td>23/12/2010</td>
+                <td>SEPTEMBER ISPO</td>
+                <td>DEPOSIT ROLLOVER [OLD: 560019060012; NEW: 560019060012]</td>
+                <td>189,423,345.51</td>
+                <td></td>
+                <td>-953,418.38</td>
+              </tr>
+            </tbody>
+          </table>
+          
+    
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </section>
       </div>
   </div>
@@ -725,7 +1084,7 @@ function fillFormWithCustomerData(customer) {
   
 
 
-     Report <a style="z-index: 999999999;" href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>
+      <a style="z-index: 999999999;" href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>
         Support</a>
 
 

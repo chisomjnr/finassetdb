@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> FinAsset  | Home </title>
+    <title> FinAsset  | Notifications </title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="home2.css">
     <link
@@ -13,7 +13,6 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 
 
   <meta name="title" content="Welcome to FinAsset">
@@ -25,85 +24,86 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-   /* Additional styles for the submenu */
-   /* Additional styles for the submenu */
-   .submenu {
-    background: #312b1b;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    overflow: hidden;  /* Important for the dropdown effect */
-    max-height: 0;     /* Start with height 0 (collapsed) */
-    transition: max-height 0.4s ease, padding 0.4s ease; /* Animate max-height and padding */
-}
+        /* Additional styles for the submenu */
+     .submenu {
+         background: #312b1b;
+         padding: 10px;
+         border-radius: 10px;
+         margin-top: 10px;
+         overflow: hidden;  /* Important for the dropdown effect */
+         max-height: 0;     /* Start with height 0 (collapsed) */
+         transition: max-height 0.4s ease, padding 0.4s ease; /* Animate max-height and padding */
+     }
+     
+     .line {
+         border-bottom: 1px solid #2b284b;
+     }
+     
+     .line2 {
+         border-bottom: 2px solid #bab9cb;
+         margin-left: 30px;
+         margin-right: 30px;
+     }
+     
+     .submenu, .nested-submenu, .nested-submenu2 {
+         list-style-type: none;
+         max-height: 0; /* Initially set max-height to 0 for hidden state */
+         padding: 0;    /* Collapse padding initially */
+     }
+     
+     .submenu li, .nested-submenu li, .nested-submenu2 li {
+         padding: 1px;
+     }
+     
+     .submenu li a, .nested-submenu li a, .nested-submenu2 li a {
+         color: #fff;
+         text-decoration: none;
+         padding-left: 20px;
+         background: transparent;
+     }
+     
+     .submenu li i, .nested-submenu li i, .nested-submenu2 li i {
+         font-size: 20px;
+     }
+     
+     .submenu li a:hover {
+         background: #1d1b31;
+         color: white;
+     }
+     
+     .submenu .dropdown-toggle {
+         background: #E4E9F7;
+         color: black;
+     }
+     
+     .submenu .dropdown-toggle i {
+         color: black;
+     }
+     
+     .dropdown-toggle {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
+     
+     .rotate {
+         transform: rotate(180deg);
+     }
+     
+     /* Class for when submenu is open */
+     .submenu.open {
+         max-height: 500px; /* A large enough height to fit the content */
+         padding: 10px;     /* Restore padding when open */
+         transition: max-height 0.5s ease, padding 0.4s ease; /* Smooth dropdown animation */
+     }
+     
+     
+           </style>
 
-.line {
-    border-bottom: 1px solid #2b284b;
-}
-
-.line2 {
-    border-bottom: 2px solid #bab9cb;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.submenu, .nested-submenu, .nested-submenu2 {
-    list-style-type: none;
-    max-height: 0; /* Initially set max-height to 0 for hidden state */
-    padding: 0;    /* Collapse padding initially */
-}
-
-.submenu li, .nested-submenu li, .nested-submenu2 li {
-    padding: 1px;
-}
-
-.submenu li a, .nested-submenu li a, .nested-submenu2 li a {
-    color: #fff;
-    text-decoration: none;
-    padding-left: 20px;
-    background: transparent;
-}
-
-.submenu li i, .nested-submenu li i, .nested-submenu2 li i {
-    font-size: 20px;
-}
-
-.submenu li a:hover {
-    background: #1d1b31;
-    color: white;
-}
-
-.submenu .dropdown-toggle {
-    background: #E4E9F7;
-    color: black;
-}
-
-.submenu .dropdown-toggle i {
-    color: black;
-}
-
-.dropdown-toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rotate {
-    transform: rotate(180deg);
-}
-
-/* Class for when submenu is open */
-.submenu.open {
-    max-height: 500px; /* A large enough height to fit the content */
-    padding: 10px;     /* Restore padding when open */
-    transition: max-height 0.5s ease, padding 0.4s ease; /* Smooth dropdown animation */
-}
 
 
-      </style>
   </head>
 <body>
-    
   <div class="sidebar">
     <div class="logo-details">
         <img src="assets/social (1).png" alt="">
@@ -118,7 +118,7 @@
       </li>
       
       <li>
-        <a id="active" href="index.html">
+        <a  href="index.html">
           <i class='bx bx-home-alt'></i>
           <span class="links_name">Home</span>
         </a>
@@ -154,9 +154,8 @@
 
  
 
-
-     <!-- Assets Management -->
-     <li>
+    <!-- Assets Management -->
+    <li>
       <a href="assetm-home.html">
         <i class='bx bxs-bar-chart-alt-2'></i>
   <span class="links_name">Asset Management</span>
@@ -172,7 +171,7 @@
 
     <!-- Account Management with Submenu -->
    <li>
-      <a href="account-management.html">
+      <a id="active" href="assetm-home.html">
         <i class='bx bxs-group'></i>
   <span class="links_name">Account Management</span>
       </a>
@@ -305,12 +304,49 @@
           <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
           <div class="content">
           <div class="logo"><a href="#">FinAsset<strong style="color: orange;">.</strong></a> </div>
-         
+            <ul class="links">
+              <li><a style="background: orange;" href="#">Home</a></li>
+              <li><a href="zcustomer-payment.html">Customer Payment</a></li>
+              <li><a href="zcustomer-deposit.html">Customer Deposit</a></li>
+              <li>
+                <a href="#" class="desktop-link">Report</a>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">Report</label>
+                <ul>
+                  <li><a href="ztable-1.html">Investment Liquidation</a></li>
+                  <li><a href="ztable-2.html">Coupon Payment Calendar</a></li>
+                  <li><a href="ztable-3.html">Investment Deal Slip</a></li>
+                  <li><a href="ztable-4.html">Cash Statement of Account</a></li>
+                </ul>
+              </li>
+
+
+              <!-- <li>
+                <a href="#" class="desktop-link">Services</a>
+                <input type="checkbox" id="show-services">
+                <label for="show-services">Services</label>
+                <ul>
+                  <li><a href="#">Drop Menu 1</a></li>
+                  <li><a href="#">Drop Menu 2</a></li>
+                  <li><a href="#">Drop Menu 3</a></li>
+                  <li>
+                    <a href="#" class="desktop-link">More Items</a>
+                    <input type="checkbox" id="show-items">
+                    <label for="show-items">More Items</label>
+                    <ul>
+                      <li><a href="#">Sub Menu 1</a></li>
+                      <li><a href="#">Sub Menu 2</a></li>
+                      <li><a href="#">Sub Menu 3</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> -->
+      
+            </ul>
           </div>
           <div class="hqi">
-                        <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
-           Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a> 
-            <a href="SeamAi.html"><i  class="bx bx-brain"></i></a>  --> 
+            <!-- <a href="notification.html"><i class="bx bx-bell"></i></a>
+           Report <a style="z-index: 999999999;" href="support.html"><i  class="ri-customer-service-2-line"></i></a>  -->
           </div>
           <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
           <form action="#" class="search-box">
@@ -320,95 +356,219 @@
         </nav>
       </div>
  
-   
-    <div  class="welcome-section">
-        <h1>Welcome to FinAsset<strong style="color: orange;">.</strong></h1>
-        <p style="color: rgb(216, 216, 216);">by <strong>Globalseam</strong></p>
+
+    <style>
+    .notification-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    align-items: center;
+    height: 300px; /* Set a fixed height for the div */
+    border: 2px solid #d3d9e6; /* Optional: border for visibility */
+    border-radius: 10px; /* Optional: rounded corners */
+    background-color: #d3d9e6; /* Optional: background color */
+}
+
+.notification-container p {
+    font-size: 18px;
+    color: #484848;
+    text-align: center;
+    margin: 20px;
+}
+
+    </style>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px;">
+        <div style="text-align: left;">
+         <h1 style="font-size: 35px; color: #181818; line-height: 1.2;"">Account Management </h1>
+        
+        </div>
+        <!-- <img src="assets/social.png" alt="FinAsset Logo" style=" width: 200px; padding-right: 30px;"> -->
     </div>
+    
+   
+   
     <br>
-    <p style="text-align: center; font-size: 15px; line-height: 1.2; margin-left: 20px; margin-right: 20px;">Feel free to checkout our <a style="color: orange;" href="guide.html">User guide</a> for easy navigation or contact our <a style="color: orange;" href="support.html">Support Team</a> for help.</p>
-<!--     
-      <div class="text2"> Let's Get You Started</div> -->
+    
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js CDN -->
+    <style>
+        .body2  {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: poppins, sans-serif;
+        }
 
+        .chart-wrapper {
+            text-align: center;
+            background: white;
+            margin: 40px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(28, 28, 28, 0.16);
+        }
 
+        .chart-container {
+            width: 700px;
+            height: 700px;
+            margin: 0 auto;
+        }
 
+       .chart-wrapper h4 {
+            font-size: 24px;
+            margin: 20px;
+            color: #1d1b31;
+         
+        
 
+        }
 
-      <section class="why-finasset2" id="why-finasset">
-        <div class="section__container2">
-          <h2 class="section__header2">
-           <i class="ri-time-line"></i>  Timelines
-          </h2>
-          <div class="reasons__grid2">
-            <div class="reason__card2">
-                <h4 id="digitalClock"></h4>
-              <p>Current <strong>Time</strong></p>
-            </div>
-            <div class="reason__card2">
-                <h4 id="currentDate"></h4>
-              <p>Current <strong>Date</strong></p>
-            </div>
-            <div id="lastLogout" class="reason__card2">
-                <h4><strong>Yesterday,</strong> 11:37pm</h4>
-                <p>Last Time <strong>Logged-in</strong></p>
-            </div>
+        .chart-container .chartjs-legend {
+            margin-top: 340px; /* Add margin top to the legend */
+            display: flex;
+            justify-content: center;
+            font-size: 16px; /* Increased font size for the legend */
+        }
+    </style>
+
+    <section class="side-by-side">
+
+<section class=".body2">
+
+<div class="chart-wrapper">
+    <h4>Pie Data Of Current Assets</h4> <!-- Heading for the chart -->
+    <div class="chart-container">
+        <canvas id="doughnutChart"></canvas> <!-- Doughnut chart -->
+    </div>
+</div>
+
+<script>
+ const ctx = document.getElementById('doughnutChart').getContext('2d');
+
+const data = {
+    labels: ['Unitized', 'Individual', 'Non-unitized'],
+    datasets: [{
+        label: 'Asset Breakdown',
+        data: [30, 38, 100 - (30 + 38)], // The remaining percentage for Non-unitized
+        backgroundColor: [
+            '#4CAF50',  // Green for Unitized
+            '#FFC107',  // Amber for Individual
+            '#F44336'   // Red for Non-unitized
+        ],
+        hoverOffset: 4
+    }]
+};
+
+const config = {
+    type: 'doughnut',
+    data: data,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'left', // Move legend to the bottom
+                labels: {
+                    font: {
+                        size: 18, // Increase font size for the legend
+                        
+                    },
+                },
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        const value = data.datasets[0].data[tooltipItem.dataIndex];
+                        return `${data.labels[tooltipItem.dataIndex]}: ${value}%`;
+                    }
+                }
+            }
+        }
+    }
+};
+
+const doughnutChart = new Chart(ctx, config);
+</script>
+
+  
             
-          </div>
-        </div>
       </section>
 
 
+      <section class="body2">
 
 
-      <div class="line2"></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js CDN -->
+<style>
+    .body2 {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: poppins, sans-serif;
+    }
+
+    .chart-wrapper {
+        text-align: center;
+        background: white;
+        margin: 40px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(28, 28, 28, 0.16);
+    }
+
+    .chart-container {
+        width: 700px;
+        height: 700px;
+        margin: 0 auto;
+    }
+
+    .chart-wrapper h4 {
+        font-size: 24px;
+        margin: 20px;
+        color: #1d1b31;
+    }
+
+    .chart-container .chartjs-legend {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+    }
+</style>
+
+<!-- <section class=".body2">
+    <div class="chart-wrapper">
+        <h4>Bar Data of Current Assets</h4> 
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+    </div>
+
+ 
+
+<script>
+  
+</script>
 
 
+</section> -->
+
+ 
 
 
-      <section class="why-finasset" id="why-finasset">
-        <div class="section__container">
-          <h2 class="section__header">
-           <i class="ri-time-line"></i>  Recently Used
-          </h2>
-          <p class="section__sub">Pick up right where you left off. </p>
-          <div class="reasons__grid">
-            <div class="reason__card">
-              <span><i class="ri-user-line"></i></span>
-              <h4>Administrator</h4>
-              <p>Last used <strong>13 Hours Ago</strong></p>
-              <span class="sp">Continue </span>
-            </div>
-            <div class="reason__card">
-              <span><i class="ri-pie-chart-line"></i></span>
-              <h4>Asset Management</h4>
-              <p>Last used <strong>13 Hours Ago</strong></p>
-                <span class="sp">Continue </span>
-            </div>
-            <div class="reason__card">
-              <span><i class="ri-bar-chart-grouped-line"></i></span>
-              <h4>Account Management</h4>
-              <p>Last used <strong>13 Hours Ago</strong></p>
-                <span class="sp">Continue </span>
-            </div>
-         
-         
-          
-          </div>
-        </div>
       </section>
 
+      </section>
+<br>
+<br>
+<br>
+<br>
 
-      <div class="line2"></div>
 
 
-      <br>
-      <br>
-  
-  
-      <br>
-      <br>
-  
-  
      Report <a style="z-index: 999999999;" href="support.html" class="user-account"><i class="ri-customer-service-2-line"></i>
         Support</a>
 
@@ -446,9 +606,6 @@
 
 
 
-
-    
-    
     
     
     <!-- Time & Date -->
